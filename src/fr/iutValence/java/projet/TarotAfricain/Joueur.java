@@ -25,6 +25,16 @@ public class Joueur {
 	 * Nombre de plis espérés
 	 */
 	public int mise;
+
+	/**
+	 * Attribut pointant la carte posée par le joueur pendant le pli
+	 */
+	public Carte cartePosee;
+
+	/**
+	 * Entier représentant le nombre de plis remportés durant un tour.
+	 */
+	public int pliRemporte;
 	
 	/**
 	 * Constructeur d'un joueur
@@ -48,5 +58,14 @@ public class Joueur {
 	 */
 	public int mise(int nbCarte) {
 		return 0;
+	}
+
+
+	/**
+	 * @return une carte
+	 */
+	public Carte poserCarte() {
+		Carte carteEnCours = new Carte();
+		return carteEnCours;
 	}
 }

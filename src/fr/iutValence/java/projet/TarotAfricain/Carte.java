@@ -13,4 +13,10 @@ public class Carte {
 	int getValeur() {
 		return this.valeurs;			
 	}
+
+
+	public boolean superieure(Carte carteGagnante) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }

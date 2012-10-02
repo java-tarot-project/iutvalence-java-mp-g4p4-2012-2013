@@ -33,15 +33,34 @@ public class Jouer {
 		int nbCarte = 5;
 		
 		while (true){
-			// distribution
-			for (int i = 0;i<3;i++) {
+			
+			// Premier joueur du tour
+			int premierJoueur = 0;
+			
+			initPliRemporte();
+			// Distribution des cartes
+			for (int joueurCourant = 0;joueurCourant < 3;joueurCourant++) {
+				int i = joueurCourant+premierJoueur;
+				if (i>3) i=i-4;
 				this.table[i].main = this.jeuDeCarte.distribuer(nbCarte);
 			}
-			// mise
-			for (int i = 0;i<3;i++) {
-				this.table[i].mise = this.table[i].mise(nbCarte);
+			// Mise des joueurs concernant les plis espérés
+			for (int joueurCourant = 0;joueurCourant < 3;joueurCourant++) {
+				int i = joueurCourant+premierJoueur;
+				if (i>3) i=i-4;
+				this.table[i].mise = this.table[joueurCourant].mise(nbCarte);
 			}
 			
+			// Tour de jeu
+			for (int tour = 0; tour<nbCarte;tour++) {
+				//Pli
+				for (int joueurCourant = 1; joueurCourant < 3;joueurCourant++) {
+					int i = joueurCourant+premierJoueur;
+					if (i>3) i=i-4;
+					this.table[i].cartePosee = this.table[i].poserCarte();
+				}
+				compareCartes();
+			}
 			// decrementation de nbCarte
 			nbCarte--;
 			if (nbCarte == 0) nbCarte=5;
@@ -50,4 +69,25 @@ public class Jouer {
 				if (this.table[i].nbVie==0) break;}
 			}
 		}
+	
+	
+	private int compareCartes() {
+		int joueurGagnant = 0;
+		Carte carteGagnante = new Carte();
+		carteGagnante = this.table[0].cartePosee;
+		for (int i = 1 ; i < 3 ; i++){
+			if (this.table[i].cartePosee.superieure(carteGagnante)) joueurGagnant = i;
+		}
+		return joueurGagnant;
+	}
+
+	/*
+	 * met les valeur de pli remporter a zero
+	 */
+	private void initPliRemporte() {
+		for (int i=0; i < 3; i++){
+			this.table[i].pliRemporte = 0;
+		}
+		
+	}
 }
