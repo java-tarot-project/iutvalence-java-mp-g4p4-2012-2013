@@ -1,5 +1,6 @@
 package fr.iutValence.java.projet.TarotAfricain;
 
+// FIXME corriger le commentaire
 /**
  * @author CLUZE - THEODORE
  * Classe définissant un "Joueur".
@@ -9,33 +10,42 @@ package fr.iutValence.java.projet.TarotAfricain;
  */
 public class Joueur {
 
+	// FIXME renommer l'attribut
+	// FIXME réfléchir à la visibilité
 	/**
-	 * nombre de vie du joueur
+	 * nombre de vies du joueur
 	 */
 	public int nbVie;
 
+	// FIXME réfléchir à la visibilité
 	/**
 	 * Main du joueur
 	 * -> Ensemble de cartes
 	 */
-	public Carte main[];
+	public Carte[] main;
 
+	// FIXME réfléchir à la visibilité
 	/**
 	 * Valeur de la mise 
 	 * Nombre de plis espérés
 	 */
 	public int mise;
 
+	// FIXME réfléchir à la visibilité
+	// FIXME corriger le commentaire
 	/**
 	 * Attribut pointant la carte posée par le joueur pendant le pli
 	 */
 	public Carte cartePosee;
 
+	// FIXME réfléchir à la visibilité
+	// FIXME corriger le commentaire
 	/**
 	 * Entier représentant le nombre de plis remportés durant un tour.
 	 */
 	public int pliRemporte;
 	
+	// FIXME détailler le commentaire
 	/**
 	 * Constructeur d'un joueur
 	 */
@@ -43,7 +53,7 @@ public class Joueur {
 		this.nbVie=14;
 	}
 	
-	
+	// FIXME corriger le commentaire
 	/**
 	 * @return nbVie du joueur
 	 */
@@ -51,7 +61,7 @@ public class Joueur {
 		return this.nbVie;
 	}
 
-
+	// FIXME corriger le commentaire
 	/**
 	 * @param nbCarte
 	 * @return La mise
@@ -60,7 +70,7 @@ public class Joueur {
 		return 0;
 	}
 
-
+	// FIXME corriger le commentaire
 	/**
 	 * @return une carte
 	 */

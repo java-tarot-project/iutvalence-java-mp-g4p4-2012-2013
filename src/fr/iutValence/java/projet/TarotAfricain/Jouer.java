@@ -1,23 +1,48 @@
 package fr.iutValence.java.projet.TarotAfricain;
 
+// FIXME corriger le commentaire
 /**
  * @author CLUZE - THEODORE
  * Classe définissant une partie
  */
 public class Jouer {
 	
+	// FIXME écrire un commentaire
+	// FIXME définir la visibilité
 	Joueur joueurReel;
+
+	// FIXME écrire un commentaire
+	// FIXME définir la visibilité
 	Joueur joueur1;
+	
+	// FIXME écrire un commentaire
+	// FIXME définir la visibilité
 	Joueur joueur2;
+	
+	// FIXME écrire un commentaire
+	// FIXME définir la visibilité
 	Joueur joueur3 ;
+	
+	// FIXME écrire un commentaire
+	// FIXME définir la visibilité
 	JeuDeCarte jeuDeCarte;
+	
+	// FIXME écrire un commentaire
+	// FIXME définir la visibilité
 	JeuDeCarte main1;
+	
+	// FIXME écrire un commentaire
+	// FIXME définir la visibilité
+	// FIXME initialiser l'attribut dans le constructeur
 	Joueur table[] = {this.joueurReel,this.joueur1,this.joueur2,this.joueur3};
 
+	// FIXME détailler le commentaire
 	/**
 	 * Constructeur initialisant les joueurs et le jeu de cartes
 	 */
 	public Jouer(){
+		
+		// FIXME est-ce pertinent de créer des joueurs dans le constructeur ?
 		this.joueurReel = new Joueur();
 		this.joueur1 = new Joueur();
 		this.joueur2 = new Joueur();
@@ -25,6 +50,7 @@ public class Jouer {
 		this.jeuDeCarte = new JeuDeCarte();
 	}
 	
+	// FIXME corriger le commentaire
 	/**
 	 * Méthode initialisant une partie de Tarot Africain
 	 */
@@ -71,6 +97,7 @@ public class Jouer {
 		}
 	
 	
+	// FIXME écrire un commentaire
 	private int compareCartes() {
 		int joueurGagnant = 0;
 		Carte carteGagnante = new Carte();
@@ -81,6 +108,8 @@ public class Jouer {
 		return joueurGagnant;
 	}
 
+	
+	// FIXME corriger le commentaire
 	/*
 	 * met les valeur de pli remporter a zero
 	 */

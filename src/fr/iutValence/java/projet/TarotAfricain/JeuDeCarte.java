@@ -1,4 +1,6 @@
 package fr.iutValence.java.projet.TarotAfricain;
+
+// FIXME corriger le commentaire
 /**
  * @author CLUZE - THEODORE
  * Classe définissant un "Jeu de Cartes".
@@ -7,6 +9,9 @@ package fr.iutValence.java.projet.TarotAfricain;
  */
 public class JeuDeCarte {
 
+	// FIXME attributs, constructeurs ?
+	
+	// FIXME corriger/compléter le commentaire
 	/**
 	 * @param i nb carte a distribué
 	 * @return null
