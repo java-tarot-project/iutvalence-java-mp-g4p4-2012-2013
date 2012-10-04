@@ -1,12 +1,11 @@
 package fr.iutValence.java.projet.TarotAfricain;
 
-// FIXME corriger le commentaire
 /**
- * @author theodorc
- *interface qui permet l'affichage a la console
+ * @author java-tarot-project
+ * Interface permettant l'affichage en console d'une partie de Tarot et ses batteries de test.
  */
 public interface affichageConsole {
 	
-	// FIXME compléter
+	// A compléter lorsque les classes seront terminées.
 
 }

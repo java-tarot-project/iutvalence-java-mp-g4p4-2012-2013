@@ -10,12 +10,11 @@ package fr.iutValence.java.projet.TarotAfricain;
  */
 public class Joueur {
 
-	// FIXME renommer l'attribut
 	// FIXME réfléchir à la visibilité
 	/**
 	 * nombre de vies du joueur
 	 */
-	public int nbVie;
+	public int pointDeVie;
 
 	// FIXME réfléchir à la visibilité
 	/**
@@ -32,39 +31,40 @@ public class Joueur {
 	public int mise;
 
 	// FIXME réfléchir à la visibilité
-	// FIXME corriger le commentaire
 	/**
-	 * Attribut pointant la carte posée par le joueur pendant le pli
+	 * Attribut mettant en valeur la carte posée lors d'un pli.
 	 */
 	public Carte cartePosee;
 
 	// FIXME réfléchir à la visibilité
-	// FIXME corriger le commentaire
 	/**
-	 * Entier représentant le nombre de plis remportés durant un tour.
+	 * Entier représentant le nombre de plis remportés durant une phase.
 	 */
 	public int pliRemporte;
 	
 	// FIXME détailler le commentaire
 	/**
-	 * Constructeur d'un joueur
+	 * Constructeur d'un Joueur
+	 * Alloue 14 points de vie
+	 * etc
 	 */
 	public Joueur() {
-		this.nbVie=14;
+		this.pointDeVie=14;
 	}
 	
 	// FIXME corriger le commentaire
 	/**
-	 * @return nbVie du joueur
+	 * @return pointDeVie du joueur
 	 */
 	public int getValeur() {
-		return this.nbVie;
+		return this.pointDeVie;
 	}
 
 	// FIXME corriger le commentaire
 	/**
-	 * @param nbCarte
-	 * @return La mise
+	 *  Mise définie par le joueur en fonction des cartes qu'il possède dans sa main
+	 * @param nbCarte 
+	 * @return int La mise
 	 */
 	public int mise(int nbCarte) {
 		return 0;

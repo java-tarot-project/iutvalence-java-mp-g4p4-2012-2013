@@ -21,5 +21,4 @@ public class JeuDeCarte {
 		return null;
 	}
 
-	
 }

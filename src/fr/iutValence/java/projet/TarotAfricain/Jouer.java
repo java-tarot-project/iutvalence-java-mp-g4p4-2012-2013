@@ -1,40 +1,52 @@
 package fr.iutValence.java.projet.TarotAfricain;
 
-// FIXME corriger le commentaire
+// Vérifier les public/private !
 /**
  * @author CLUZE - THEODORE
  * Classe définissant une partie
  */
 public class Jouer {
 	
-	// FIXME écrire un commentaire
-	// FIXME définir la visibilité
-	Joueur joueurReel;
+	/**
+	* Joueur joueurReel représente la classe utilisée par le Joueur.
+	* Par le biais de cette classe, l'utilisateur va être capable de jouer une partie de Tarot.
+	*/
+	public Joueur joueurReel;
 
-	// FIXME écrire un commentaire
-	// FIXME définir la visibilité
-	Joueur joueur1;
+	/**
+	* Joueur joueur simulée avec Intelligence Artificielle.
+	* Joueur fictionnel simulant un des 4 joueurs d'une partie.
+	* Non accessible par l'utilisateur.
+	*/
+	private Joueur joueur1;
 	
-	// FIXME écrire un commentaire
-	// FIXME définir la visibilité
-	Joueur joueur2;
+	/**
+	* Joueur joueur simulée avec Intelligence Artificielle.
+	* Joueur fictionnel simulant un des 4 joueurs d'une partie.
+	* Non accessible par l'utilisateur.
+	*/
+	private Joueur joueur2;
 	
-	// FIXME écrire un commentaire
-	// FIXME définir la visibilité
-	Joueur joueur3 ;
+	/**
+	*Joueur joueur simulée avec Intelligence Artificielle.
+	* Joueur fictionnel simulant un des 4 joueurs d'une partie.
+	* Non accessible par l'utilisateur.
+	*/
+	private Joueur joueur3 ;
 	
-	// FIXME écrire un commentaire
-	// FIXME définir la visibilité
-	JeuDeCarte jeuDeCarte;
+	/**
+	* JeudeCarte simulant les différentes cartes
+	* auxquelles les joueurs pourront accéder.
+	*/
+	private JeuDeCarte jeuDeCarte;
 	
-	// FIXME écrire un commentaire
-	// FIXME définir la visibilité
+	// main1 utile ?
 	JeuDeCarte main1;
 	
 	// FIXME écrire un commentaire
 	// FIXME définir la visibilité
 	// FIXME initialiser l'attribut dans le constructeur
-	Joueur table[] = {this.joueurReel,this.joueur1,this.joueur2,this.joueur3};
+	private Joueur table[] = {this.joueurReel,this.joueur1,this.joueur2,this.joueur3};
 
 	// FIXME détailler le commentaire
 	/**
@@ -43,6 +55,7 @@ public class Jouer {
 	public Jouer(){
 		
 		// FIXME est-ce pertinent de créer des joueurs dans le constructeur ?
+		// -> Faire ça dans un " main " ?
 		this.joueurReel = new Joueur();
 		this.joueur1 = new Joueur();
 		this.joueur2 = new Joueur();
@@ -52,7 +65,11 @@ public class Jouer {
 	
 	// FIXME corriger le commentaire
 	/**
-	 * Méthode initialisant une partie de Tarot Africain
+	 * Méthode initialisant une partie de Tarot Africain.
+	 * Le principe est de distribuer {5,4,3,2,1} carte(s) aux quatre joueurs.
+	 * Suite à quoi les joueurs misent le nombre de plis susceptibles d'être remportés.
+	 * Après la dernière phase d'un tour (distribution d'une seule carte),
+	 * le premier joueur devient son voisin de gauche.
 	 */
 	public void jouer(){
 		
@@ -92,12 +109,14 @@ public class Jouer {
 			if (nbCarte == 0) nbCarte=5;
 			// condition de fin de jeu
 			for (int i = 0;i<3;i++) {
-				if (this.table[i].nbVie==0) break;}
+				if (this.table[i].pointDeVie==0) break;}
 			}
 		}
 	
 	
-	// FIXME écrire un commentaire
+	/**
+	*@return int l'indice dans du joueur ayant gagné un pli.
+	**/
 	private int compareCartes() {
 		int joueurGagnant = 0;
 		Carte carteGagnante = new Carte();
@@ -109,9 +128,9 @@ public class Jouer {
 	}
 
 	
-	// FIXME corriger le commentaire
-	/*
-	 * met les valeur de pli remporter a zero
+	/**
+	 * Méthode permettant la réinitialisation des attributs .pliRemporte
+	 * représentant les plis qu'un joueur a gagné pendant une phase.
 	 */
 	private void initPliRemporte() {
 		for (int i=0; i < 3; i++){

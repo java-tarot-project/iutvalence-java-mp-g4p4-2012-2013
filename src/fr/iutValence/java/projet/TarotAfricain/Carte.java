@@ -1,6 +1,6 @@
 package fr.iutValence.java.projet.TarotAfricain;
-
-//FIXME corriger le commentaire
+	// /!\ Demander à S. Jean d'éclaircir le sujet de la classe de test. /!\
+	
 /**
  * @author CLUZE - THEODORE
  * Classe définissant une "carte".
@@ -8,24 +8,30 @@ package fr.iutValence.java.projet.TarotAfricain;
  */
 public class Carte {
 	
-	// FIXME écrire un commentaire
-	private int valeurs; //{1..22};
 
-	
-	// FIXME constructeurs ?
-	
-	// FIXME réfléchir à la visibilité de la méthode (public/private)
-	// FIXME valeur Vs valeurs ?
-	int getValeur() {
-		return this.valeurs;			
-	}
+	/**
+	 * valeurs possibles que peut prendre une carte.
+	 * Une carte prend une valeur entre 1 et 22.
+	 */
+	public int valeurs; //{1..22};
 
-	// FIXME écrire un commentaire
-	// FIXME redéfinir via compareTo de l'interface Comparable<Carte>
+	/**
+	 * @param carteGagnante
+	 * @return boolean un booléen à 1 si la carte est supérieure à carteGagnante
+	 * 							  à 0 si la carte est inférieure à carteGagnante.
+	 */
 	public boolean superieure(Carte carteGagnante) {
-		// TODO Auto-generated method stub
-		return false;
+		if (this.valeurs >= carteGagnante.valeurs) return true;
+		else return false;
 	}
+
+	
+
+
+	// S.Jean propose de repasser par compareTo( o object )
+	//public boolean superieure(Carte carteGagnante) {
+	//	return false;
+	//}
 	
 	// FIXME redéfinir toString et écrire une classe de test
 }
