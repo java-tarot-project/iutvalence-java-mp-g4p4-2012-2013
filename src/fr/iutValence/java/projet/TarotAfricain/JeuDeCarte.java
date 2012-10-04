@@ -23,11 +23,11 @@ public class JeuDeCarte {
 	public int valeurMax = 22;
 	
 	// FIXME Creer un tableau de 22 cases avec 22 entiers aléatoires de 1 à 22, une seule occurence
-	//public Paquet creerPaquet(){
-	//	for(i=1;i<22;i++){
-			
-	//	}
-	//}
+	// Tableau à deux dimensions : 22 cases . Chaque case contient [Entier|booléen]
+	// (int)(Math.random() * (valeurMax - valeurMin) + valeurMin)
+	// Entier : 1 à 22 - booléen : 0 -> carte non utilisée, 1 -> carte utilisée
+	// Tant qu'une carte est non utilisée, on génère un nombre aléatoire entre 1 et 22 et on vérifie le booléen.
+
 	/**
 	 * @param i représente le nombre de cartes à distribuer.
 	 * @return null
