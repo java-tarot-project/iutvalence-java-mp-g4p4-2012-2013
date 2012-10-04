@@ -1,6 +1,6 @@
 package fr.iutValence.java.projet.TarotAfricain;
 
-// FIXME corriger le commentaire
+
 /**
  * @author CLUZE - THEODORE
  * Classe définissant un "Jeu de Cartes".
@@ -9,11 +9,27 @@ package fr.iutValence.java.projet.TarotAfricain;
  */
 public class JeuDeCarte {
 
-	// FIXME attributs, constructeurs ?
-	
-	// FIXME corriger/compléter le commentaire
 	/**
-	 * @param i nb carte a distribué
+	 * Tableau d'entiers de 1 à 22 à occurence unique.
+	 */
+	public int Paquet[];
+	/**
+	 * Valeur minimal que peut prendre une Carte dans un JeuDeCarte
+	 */
+	public int valeurMin = 1;
+	/**
+	 * Valeur maximale que peut prendre une Carte dans un JeuDeCarte
+	 */
+	public int valeurMax = 22;
+	
+	// FIXME Creer un tableau de 22 cases avec 22 entiers aléatoires de 1 à 22, une seule occurence
+	//public Paquet creerPaquet(){
+	//	for(i=1;i<22;i++){
+			
+	//	}
+	//}
+	/**
+	 * @param i représente le nombre de cartes à distribuer.
 	 * @return null
 	 */
 	public Carte[] distribuer(int i) {

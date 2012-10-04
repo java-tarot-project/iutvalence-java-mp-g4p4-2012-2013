@@ -15,23 +15,30 @@ public class Carte {
 	 */
 	public int valeurs; //{1..22};
 
+
+	/**
+	 * Méthode permettant de convertir la valeur de la carte en une chaîne de caractère.
+	 * @return String conversion de valeurs (int) en String.
+	 */
+	public String afficherValeur(){
+		return "" +this.valeurs;
+	}
 	/**
 	 * @param carteGagnante
 	 * @return boolean un booléen à 1 si la carte est supérieure à carteGagnante
 	 * 							  à 0 si la carte est inférieure à carteGagnante.
 	 */
 	public boolean superieure(Carte carteGagnante) {
-		if (this.valeurs >= carteGagnante.valeurs) return true;
+		if (this.valeurs >= carteGagnante.valeurs)return true;
 		else return false;
 	}
-
 	
-
+	
+	
 
 	// S.Jean propose de repasser par compareTo( o object )
 	//public boolean superieure(Carte carteGagnante) {
 	//	return false;
 	//}
-	
-	// FIXME redéfinir toString et écrire une classe de test
+
 }

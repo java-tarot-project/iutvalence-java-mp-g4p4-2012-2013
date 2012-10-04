@@ -1,6 +1,7 @@
 package fr.iutValence.java.projet.TarotAfricain;
 
-// FIXME corriger le commentaire
+
+
 /**
  * @author CLUZE - THEODORE
  * Classe définissant un "Joueur".
@@ -42,7 +43,7 @@ public class Joueur {
 	 */
 	public int pliRemporte;
 	
-	// FIXME détailler le commentaire
+
 	/**
 	 * Constructeur d'un Joueur
 	 * Alloue 14 points de vie
@@ -52,15 +53,9 @@ public class Joueur {
 		this.pointDeVie=14;
 	}
 	
-	// FIXME corriger le commentaire
-	/**
-	 * @return pointDeVie du joueur
-	 */
-	public int getValeur() {
-		return this.pointDeVie;
-	}
 
-	// FIXME corriger le commentaire
+
+
 	/**
 	 *  Mise définie par le joueur en fonction des cartes qu'il possède dans sa main
 	 * @param nbCarte 
@@ -70,7 +65,7 @@ public class Joueur {
 		return 0;
 	}
 
-	// FIXME corriger le commentaire
+
 	/**
 	 * @return une carte
 	 */

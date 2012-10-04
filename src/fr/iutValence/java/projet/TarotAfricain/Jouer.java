@@ -40,17 +40,19 @@ public class Jouer {
 	*/
 	private JeuDeCarte jeuDeCarte;
 	
-	// main1 utile ?
-	JeuDeCarte main1;
 	
-	// FIXME écrire un commentaire
-	// FIXME définir la visibilité
-	// FIXME initialiser l'attribut dans le constructeur
+
+	//  initialiser l'attribut dans le constructeur ?
+	/**
+	 * Création d'une table de joueurs. Représentation sous forme d'un tableau de 4 joueurs.
+	 * ( les quatre joueurs sont censés être autour d'une table)
+	 * Permet d'effectuer des actions communes sur les quatre joueurs.
+	 */
 	private Joueur table[] = {this.joueurReel,this.joueur1,this.joueur2,this.joueur3};
 
-	// FIXME détailler le commentaire
 	/**
 	 * Constructeur initialisant les joueurs et le jeu de cartes
+	 * Création de quatre Joueurs, création d'un JeudeCarte
 	 */
 	public Jouer(){
 		
@@ -63,7 +65,7 @@ public class Jouer {
 		this.jeuDeCarte = new JeuDeCarte();
 	}
 	
-	// FIXME corriger le commentaire
+	
 	/**
 	 * Méthode initialisant une partie de Tarot Africain.
 	 * Le principe est de distribuer {5,4,3,2,1} carte(s) aux quatre joueurs.
