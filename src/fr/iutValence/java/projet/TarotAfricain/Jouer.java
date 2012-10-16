@@ -58,10 +58,10 @@ public class Jouer {
 		
 		// FIXME est-ce pertinent de créer des joueurs dans le constructeur ?
 		// -> Faire ça dans un " main " ?
-		this.joueurReel = new Joueur();
-		this.joueur1 = new Joueur();
-		this.joueur2 = new Joueur();
-		this.joueur3 = new Joueur();
+		this.joueurReel = new JoueurReel();
+		this.joueur1 = new JoueurIA();
+		this.joueur2 = new JoueurIA();
+		this.joueur3 = new JoueurIA();
 		this.jeuDeCarte = new JeuDeCarte();
 	}
 	

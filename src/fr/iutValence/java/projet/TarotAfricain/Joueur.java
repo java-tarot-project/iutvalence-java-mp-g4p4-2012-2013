@@ -9,35 +9,33 @@ package fr.iutValence.java.projet.TarotAfricain;
  * une main composée de cartes
  * d'un choix de mise d'une valeur.
  */
-public class Joueur {
+public abstract class Joueur {
 
-	// FIXME réfléchir à la visibilité
 	/**
 	 * nombre de vies du joueur
 	 */
 	private int pointDeVie;
 
-	// FIXME réfléchir à la visibilité
+
 	/**
 	 * Main du joueur
 	 * -> Ensemble de cartes
 	 */
 	private Carte[] main;
 
-	// FIXME réfléchir à la visibilité
+
 	/**
 	 * Valeur de la mise 
 	 * Nombre de plis espérés
 	 */
 	private int mise;
 
-	// FIXME réfléchir à la visibilité
-	/**
+		/**
 	 * Attribut mettant en valeur la carte posée lors d'un pli.
 	 */
 	private Carte cartePosee;
 
-	// FIXME réfléchir à la visibilité
+
 	/**
 	 * Entier représentant le nombre de plis remportés durant une phase.
 	 */
@@ -51,6 +49,7 @@ public class Joueur {
 	 */
 	public Joueur() {
 		this.pointDeVie=14;
+		this.pliRemporte=0;
 	}
 	
 
@@ -77,48 +76,50 @@ public class Joueur {
 
 
 
+	/**
+	 * @return int
+	 */
 	public int getPointDeVie() {
-		// TODO Auto-generated method stub
-		return 0;
+
+		return this.pointDeVie;
 	}
 
-
-
-
+	/**
+	 * @param distribuer
+	 */
 	public void setMain(Carte[] distribuer) {
-		// TODO Auto-generated method stub
+		this.main=distribuer;
 		
 	}
 
-
-
-
-	public void setMise(int mise2) {
-		// TODO Auto-generated method stub
+	/**
+	 * @param misej 
+	 */
+	public void setMise(int misej) {
+		this.mise=misej;
 		
 	}
 
-
-
-
+	/**
+	 * @param poserCarte
+	 */
 	public void setCartePosee(Carte poserCarte) {
-		// TODO Auto-generated method stub
+		this.cartePosee=poserCarte;
 		
 	}
 
-
-
-
+	/**
+	 * @return cartePosee
+	 */
 	public Carte getCartePosee() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.cartePosee;
 	}
 
-
-
-
+	/**
+	 * @param i
+	 */
 	public void setPliRemporte(int i) {
-		// TODO Auto-generated method stub
+		this.pliRemporte=i;
 		
 	}
 
