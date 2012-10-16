@@ -9,7 +9,7 @@ package fr.iutValence.java.projet.TarotAfricain;
  * @author CLUZE - THEODORE
 
  */
-// FIXME renommer la classe (JeuDeCartes ?) Pourquoi?
+// FIXME renommer la classe (JeuDeCartes ?)                    Pourquoi?
 public class JeuDeCarte {
 
 
@@ -40,7 +40,7 @@ public class JeuDeCarte {
 	public JeuDeCarte() {
 		int i;
 		for(i = 1; i <= 22;i++) {
-			this.Paquet[i].valeurs=i;
+			this.Paquet[i].setValeurs(i);
 			this.boolPaquet[i]=false;
 		}
 		
@@ -63,4 +63,10 @@ public class JeuDeCarte {
 		return retourn;
 	}
 	
+	
+	public String toString(){
+		String chaineJeuDeCarte = "";
+		while()      //On a un petit souci ici
+		return chaineJeuDeCarte;
+	}
 }

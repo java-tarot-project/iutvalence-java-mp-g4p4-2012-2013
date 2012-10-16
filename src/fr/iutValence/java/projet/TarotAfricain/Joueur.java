@@ -11,6 +11,7 @@ package fr.iutValence.java.projet.TarotAfricain;
  */
 public abstract class Joueur {
 
+
 	/**
 	 * nombre de vies du joueur
 	 */
@@ -60,18 +61,13 @@ public abstract class Joueur {
 	 * @param nbCarte 
 	 * @return int La mise
 	 */
-	public int mise(int nbCarte) {
-		return 0;
-	}
+	abstract int mise(int nbCarte);
 
 
 	/**
 	 * @return une carte
 	 */
-	public Carte poserCarte() {
-		Carte carteEnCours = new Carte();
-		return carteEnCours;
-	}
+	abstract Carte poserCarte();
 
 
 
@@ -105,9 +101,9 @@ public abstract class Joueur {
 	 */
 	public void setCartePosee(Carte poserCarte) {
 		this.cartePosee=poserCarte;
-		
 	}
 
+	
 	/**
 	 * @return cartePosee
 	 */

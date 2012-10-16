@@ -56,8 +56,6 @@ public class Jouer {
 	 */
 	public Jouer(){
 		
-		// FIXME est-ce pertinent de créer des joueurs dans le constructeur ?
-		// -> Faire ça dans un " main " ?
 		this.joueurReel = new JoueurReel();
 		this.joueur1 = new JoueurIA();
 		this.joueur2 = new JoueurIA();

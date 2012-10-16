@@ -1,5 +1,5 @@
 package fr.iutValence.java.projet.TarotAfricain;
-	// /!\ Demander à S. Jean d'éclaircir le sujet de la classe de test. /!\
+	
 	
 /**
  *  * Classe définissant une "carte".
@@ -10,22 +10,25 @@ package fr.iutValence.java.projet.TarotAfricain;
 public class Carte {
 	
 
-	// FIXME ici, on représente UNE carte. une carte ne peut prendre qu'une seule valeur.
 	/**
-	 * valeurs possibles que peut prendre une carte.
+	 * valeurs possibles que peut prendre UNE carte.
 	 * Une carte prend une valeur entre 1 et 22.
 	 */
-	public int valeurs; //{1..22};
+	private int valeurs; //{1..22};
 
 
 	/**
 	 * Méthode permettant de convertir la valeur de la carte en une chaîne de caractère.
 	 * @return String conversion de valeurs (int) en String.
 	 */
-	// FIXME remplacer par la redéfinition de toString
-	public String afficherValeur(){
+	
+	
+
+	public String toString(){
 		return "" +this.valeurs;
 	}
+	
+	
 	
 	// FIXME remplacer par la maéthode compareTo de Comparable<Carte>
 	/**
@@ -37,13 +40,13 @@ public class Carte {
 		if (this.valeurs >= carteGagnante.valeurs)return true;
 		else return false;
 	}
-	
-	
-	
 
-	// S.Jean propose de repasser par compareTo( o object )
-	//public boolean superieure(Carte carteGagnante) {
-	//	return false;
-	//}
+
+
+	public void setValeurs(int i) {
+		this.valeurs=i;
+		
+	}
+	
 
 }
