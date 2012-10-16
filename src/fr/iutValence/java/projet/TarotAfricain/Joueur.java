@@ -15,33 +15,33 @@ public class Joueur {
 	/**
 	 * nombre de vies du joueur
 	 */
-	public int pointDeVie;
+	private int pointDeVie;
 
 	// FIXME réfléchir à la visibilité
 	/**
 	 * Main du joueur
 	 * -> Ensemble de cartes
 	 */
-	public Carte[] main;
+	private Carte[] main;
 
 	// FIXME réfléchir à la visibilité
 	/**
 	 * Valeur de la mise 
 	 * Nombre de plis espérés
 	 */
-	public int mise;
+	private int mise;
 
 	// FIXME réfléchir à la visibilité
 	/**
 	 * Attribut mettant en valeur la carte posée lors d'un pli.
 	 */
-	public Carte cartePosee;
+	private Carte cartePosee;
 
 	// FIXME réfléchir à la visibilité
 	/**
 	 * Entier représentant le nombre de plis remportés durant une phase.
 	 */
-	public int pliRemporte;
+	private int pliRemporte;
 	
 
 	/**
@@ -73,4 +73,53 @@ public class Joueur {
 		Carte carteEnCours = new Carte();
 		return carteEnCours;
 	}
+
+
+
+
+	public int getPointDeVie() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+
+
+	public void setMain(Carte[] distribuer) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+
+	public void setMise(int mise2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+
+	public void setCartePosee(Carte poserCarte) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+
+	public Carte getCartePosee() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
+
+	public void setPliRemporte(int i) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

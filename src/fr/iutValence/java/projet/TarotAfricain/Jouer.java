@@ -87,13 +87,14 @@ public class Jouer {
 			for (int joueurCourant = 0;joueurCourant < 3;joueurCourant++) {
 				int i = joueurCourant+premierJoueur;
 				if (i>3) i=i-4;
-				this.table[i].main = this.jeuDeCarte.distribuer(nbCarte);
+				this.table[i].setMain(this.jeuDeCarte.distribuer(nbCarte));
+				
 			}
 			// Mise des joueurs concernant les plis espérés
 			for (int joueurCourant = 0;joueurCourant < 3;joueurCourant++) {
 				int i = joueurCourant+premierJoueur;
 				if (i>3) i=i-4;
-				this.table[i].mise = this.table[joueurCourant].mise(nbCarte);
+				this.table[i].setMise(this.table[joueurCourant].mise(nbCarte));
 			}
 			
 			// Tour de jeu
@@ -102,7 +103,7 @@ public class Jouer {
 				for (int joueurCourant = 1; joueurCourant < 3;joueurCourant++) {
 					int i = joueurCourant+premierJoueur;
 					if (i>3) i=i-4;
-					this.table[i].cartePosee = this.table[i].poserCarte();
+					this.table[i].setCartePosee(this.table[i].poserCarte());
 				}
 				compareCartes();
 			}
@@ -111,20 +112,22 @@ public class Jouer {
 			if (nbCarte == 0) nbCarte=5;
 			// condition de fin de jeu
 			for (int i = 0;i<3;i++) {
-				if (this.table[i].pointDeVie==0) break;}
+				if (this.table[i].getPointDeVie()==0) break;}
 			}
 		}
 	
 	
+
+
 	/**
 	*@return int l'indice dans du joueur ayant gagné un pli.
 	**/
 	private int compareCartes() {
 		int joueurGagnant = 0;
 		Carte carteGagnante = new Carte();
-		carteGagnante = this.table[0].cartePosee;
+		carteGagnante = this.table[0].getCartePosee();
 		for (int i = 1 ; i < 3 ; i++){
-			if (this.table[i].cartePosee.superieure(carteGagnante)) joueurGagnant = i;
+			if (this.table[i].getCartePosee().superieure(carteGagnante)) joueurGagnant = i;
 		}
 		return joueurGagnant;
 	}
@@ -136,7 +139,7 @@ public class Jouer {
 	 */
 	private void initPliRemporte() {
 		for (int i=0; i < 3; i++){
-			this.table[i].pliRemporte = 0;
+			this.table[i].setPliRemporte(0);
 		}
 		
 	}

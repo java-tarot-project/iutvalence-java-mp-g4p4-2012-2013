@@ -9,45 +9,58 @@ package fr.iutValence.java.projet.TarotAfricain;
  * @author CLUZE - THEODORE
 
  */
-// FIXME renommer la classe (JeuDeCartes ?)
+// FIXME renommer la classe (JeuDeCartes ?) Pourquoi?
 public class JeuDeCarte {
 
-	/**
-	 * Tableau d'entiers de 1 à 22 à occurence unique.
-	 */
-	public int[] Paquet;
-	
+
 	/**
 	 * Valeur minimale que peut prendre une Carte dans un JeuDeCarte
 	 */
-	// FIXME définir sous forme de constante
-	public int valeurMin = 1;
+	public final static int valeurMin = 1;
 	
 	/**
 	 * Valeur maximale que peut prendre une Carte dans un JeuDeCarte
 	 */
-	// FIXME définir sous forme de constante
-	public int valeurMax = 22;
-	
-	// FIXME Creer un tableau de 22 cases avec 22 entiers aléatoires de 1 à 22, une seule occurence
-	// Tableau à deux dimensions : 22 cases . Chaque case contient [Entier|booléen]
-	// (int)(Math.random() * (valeurMax - valeurMin) + valeurMin)
-	// Entier : 1 à 22 - booléen : 0 -> carte non utilisée, 1 -> carte utilisée
-	// Tant qu'une carte est non utilisée, on génère un nombre aléatoire entre 1 et 22 et on vérifie le booléen.
+	public final static int valeurMax = 22;
 
-	
-	// FIXME définir un constructeur
+	/**
+	 * Tableau d'entiers de 1 à 22 à occurence unique.
+	 */
+	public Carte[] Paquet;
 	
 	/**
-	 * @param i représente le nombre de cartes à distribuer.
-	 * @return null
+	 * 
 	 */
-	public Carte[] distribuer(int i) {
-		// TODO Auto-generated method stub
-		return null;
+	public boolean[] boolPaquet;
+	
+	
+	/**
+	 * 
+	 */
+	public JeuDeCarte() {
+		int i;
+		for(i = 1; i <= 22;i++) {
+			this.Paquet[i].valeurs=i;
+			this.boolPaquet[i]=false;
+		}
+		
 	}
 	
+	/**
+	 * @param nbCarteADistrib représente le nombre de cartes à distribuer.
+	 * @return null
+	 */
+	public Carte[] distribuer(int nbCarteADistrib) {
+		int i;
+		Carte[] retourn =new Carte[nbCarteADistrib] ;
+		for(i=1; i<= nbCarteADistrib;i++) {
+			int y=(int)(Math.random() * (valeurMax - valeurMin) + valeurMin);
+			if((this.boolPaquet[y]) ) {
+				retourn[i]=this.Paquet[y];
+			}
+			else i--;
+		}
+		return retourn;
+	}
 	
-	// FIXME redéfinir toString
-
 }
