@@ -15,21 +15,21 @@ public class Jouer {
 
 	/**
 	* Joueur joueur simulée avec Intelligence Artificielle.
-	* Joueur fictionnel simulant un des 4 joueurs d'une partie.
+	* Joueur fictif simulant un des 4 joueurs d'une partie.
 	* Non accessible par l'utilisateur.
 	*/
 	private Joueur joueur1;
 	
 	/**
 	* Joueur joueur simulée avec Intelligence Artificielle.
-	* Joueur fictionnel simulant un des 4 joueurs d'une partie.
+	* Joueur fictif simulant un des 4 joueurs d'une partie.
 	* Non accessible par l'utilisateur.
 	*/
 	private Joueur joueur2;
 	
 	/**
 	*Joueur joueur simulée avec Intelligence Artificielle.
-	* Joueur fictionnel simulant un des 4 joueurs d'une partie.
+	* Joueur fictif simulant un des 4 joueurs d'une partie.
 	* Non accessible par l'utilisateur.
 	*/
 	private Joueur joueur3 ;
@@ -116,7 +116,7 @@ public class Jouer {
 	
 	
 
-
+	// FIXME compléter le commentaire
 	/**
 	*@return int l'indice dans du joueur ayant gagné un pli.
 	**/

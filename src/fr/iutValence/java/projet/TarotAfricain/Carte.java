@@ -9,28 +9,28 @@ package fr.iutValence.java.projet.TarotAfricain;
  */
 public class Carte {
 	
-
+	
+	// FIXME faire en sorte qu'une carte ne puisse pas être modifiée une fois créée
+	
+	
+	// FIXME si cela représente la valeur d'une carte, renommer l'attribut
+	// FIXME définir les constantes des cartes via une énumération
 	/**
-	 * valeurs possibles que peut prendre UNE carte.
+	 * valeurs possibles que peut prendre une carte.
 	 * Une carte prend une valeur entre 1 et 22.
 	 */
 	private int valeurs; //{1..22};
 
-
+	// FIXME définir un constructeur
 	/**
-	 * Méthode permettant de convertir la valeur de la carte en une chaîne de caractère.
+	 * Méthode permettant de convertir la valeur de la carte en une chaîne de caractères.
 	 * @return String conversion de valeurs (int) en String.
 	 */
-	
-	
-
 	public String toString(){
 		return "" +this.valeurs;
 	}
 	
-	
-	
-	// FIXME remplacer par la maéthode compareTo de Comparable<Carte>
+	// FIXME remplacer par la méthode compareTo de Comparable<Carte>
 	/**
 	 * @param carteGagnante
 	 * @return boolean un booléen à 1 si la carte est supérieure à carteGagnante
@@ -42,11 +42,14 @@ public class Carte {
 	}
 
 
-
+	// FIXME écrire un commentaire
 	public void setValeurs(int i) {
 		this.valeurs=i;
 		
 	}
 	
+	// FIXME redéfinir equals et hashCode
+	
+	// FIXME écrire (dans une autre classe)  une application de test basique
 
 }

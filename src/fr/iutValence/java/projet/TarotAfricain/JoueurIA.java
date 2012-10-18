@@ -1,12 +1,13 @@
 package fr.iutValence.java.projet.TarotAfricain;
 
-
+// FIXME compléter le commentaire
 /**
  * @author theodorc
  *
  */
 public class JoueurIA extends Joueur {
 
+	// FIXME compléter le commentaire
 	/**
 	 * 
 	 */

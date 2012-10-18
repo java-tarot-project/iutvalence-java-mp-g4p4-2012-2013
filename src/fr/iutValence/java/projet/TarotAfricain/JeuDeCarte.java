@@ -9,31 +9,37 @@ package fr.iutValence.java.projet.TarotAfricain;
  * @author CLUZE - THEODORE
 
  */
-// FIXME renommer la classe (JeuDeCartes ?)                    Pourquoi?
+// FIXME renommer la classe (il y a plusieurs cartes dans le jeu : JeuDeCartes ?)
 public class JeuDeCarte {
 
-
+	// FIXME définir une constante par carte du paquet (pour n'avoir qu'un seul exemplaire de chaque cart par paquet)
 	/**
 	 * Valeur minimale que peut prendre une Carte dans un JeuDeCarte
 	 */
+	// FIXME respecter les conventions d'écriture
 	public final static int valeurMin = 1;
 	
 	/**
 	 * Valeur maximale que peut prendre une Carte dans un JeuDeCarte
 	 */
+	// FIXME respecter les conventions d'écriture
 	public final static int valeurMax = 22;
 
+	// FIXME le commentaire ne correspond pas à la définition
 	/**
 	 * Tableau d'entiers de 1 à 22 à occurence unique.
 	 */
 	public Carte[] Paquet;
 	
+	
+	// FIXME Définir un seul tableau, dont le type peut être hérité de Carte pour ajouter la notion de distribuée/non distribuée
 	/**
 	 * 
 	 */
 	public boolean[] boolPaquet;
 	
 	
+	// FIXME compléter le commentaire
 	/**
 	 * 
 	 */
@@ -45,7 +51,12 @@ public class JeuDeCarte {
 		}
 		
 	}
+
+	// FIXME ajouter une méthode permettant de tirer une carte au hasard dans le paquet
 	
+	// FIXME ajouter une méthode permettant de savoir combien il reste de cartes dans le paquet
+	
+	// FIXME compléter/corriger le commentaire
 	/**
 	 * @param nbCarteADistrib représente le nombre de cartes à distribuer.
 	 * @return null

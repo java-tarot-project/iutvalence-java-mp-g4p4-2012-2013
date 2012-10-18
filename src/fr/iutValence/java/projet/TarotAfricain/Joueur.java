@@ -11,7 +11,7 @@ package fr.iutValence.java.projet.TarotAfricain;
  */
 public abstract class Joueur {
 
-
+	// FIXME détailler (en quoi cela est lié au jeu ?)
 	/**
 	 * nombre de vies du joueur
 	 */
@@ -31,7 +31,9 @@ public abstract class Joueur {
 	 */
 	private int mise;
 
-		/**
+	
+	// FIXME est ce utile (Vs variable locale autre part ?)
+	/**
 	 * Attribut mettant en valeur la carte posée lors d'un pli.
 	 */
 	private Carte cartePosee;
@@ -49,13 +51,17 @@ public abstract class Joueur {
 	 * etc
 	 */
 	public Joueur() {
+		
+		// FIXME définir la valeur par défaut via une constante
 		this.pointDeVie=14;
 		this.pliRemporte=0;
+		
+		// FIXME tous les attributs doivent être initialisés
 	}
 	
 
 
-
+	// FIXME compléter le commentaire
 	/**
 	 *  Mise définie par le joueur en fonction des cartes qu'il possède dans sa main
 	 * @param nbCarte 
@@ -64,6 +70,7 @@ public abstract class Joueur {
 	abstract int mise(int nbCarte);
 
 
+	// FIXME compléter le commentaire
 	/**
 	 * @return une carte
 	 */
@@ -71,7 +78,7 @@ public abstract class Joueur {
 
 
 
-
+	// FIXME compléter le commentaire
 	/**
 	 * @return int
 	 */
@@ -80,6 +87,7 @@ public abstract class Joueur {
 		return this.pointDeVie;
 	}
 
+	// FIXME compléter le commentaire
 	/**
 	 * @param distribuer
 	 */
@@ -88,6 +96,7 @@ public abstract class Joueur {
 		
 	}
 
+	// FIXME compléter le commentaire
 	/**
 	 * @param misej 
 	 */
@@ -96,6 +105,7 @@ public abstract class Joueur {
 		
 	}
 
+	// FIXME compléter le commentaire
 	/**
 	 * @param poserCarte
 	 */
@@ -103,7 +113,7 @@ public abstract class Joueur {
 		this.cartePosee=poserCarte;
 	}
 
-	
+	// FIXME compléter le commentaire
 	/**
 	 * @return cartePosee
 	 */
@@ -111,6 +121,7 @@ public abstract class Joueur {
 		return this.cartePosee;
 	}
 
+	// FIXME compléter le commentaire
 	/**
 	 * @param i
 	 */
