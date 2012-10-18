@@ -7,35 +7,19 @@ package fr.iutValence.java.projet.TarotAfricain;
  * @author CLUZE - THEODORE
  */
 // FIXME renommer la classe (il y a plusieurs cartes dans le jeu : JeuDeCartes
-// ?)
+// ?) (fixed)
 public class JeuDeCartes {
 
 	// FIXME définir une constante par carte du paquet (pour n'avoir qu'un seul
-	// exemplaire de chaque carte par paquet)
+	// exemplaire de chaque carte par paquet) (fixed)
 
-	private final static Carte carte1 = new Carte(1);
-	private final static Carte carte2 = new Carte(2);
-	private final static Carte carte3 = new Carte(3);
-	private final static Carte carte4 = new Carte(4);
-	private final static Carte carte5 = new Carte(5);
-	private final static Carte carte6 = new Carte(6);
-	private final static Carte carte7 = new Carte(7);
-	private final static Carte carte8 = new Carte(8);
-	private final static Carte carte9 = new Carte(9);
-	private final static Carte carte10 = new Carte(10);
-	private final static Carte carte11 = new Carte(11);
-	private final static Carte carte12 = new Carte(12);
-	private final static Carte carte13 = new Carte(13);
-	private final static Carte carte14 = new Carte(14);
-	private final static Carte carte15 = new Carte(15);
-	private final static Carte carte16 = new Carte(16);
-	private final static Carte carte17 = new Carte(17);
-	private final static Carte carte18 = new Carte(18);
-	private final static Carte carte19 = new Carte(19);
-	private final static Carte carte20 = new Carte(20);
-	private final static Carte carte21 = new Carte(21);
-	private final static Carte carte22 = new Carte(22);
-
+	static CarteDePaquet[] cartes = new CarteDePaquet[23];
+	
+	static 
+	{
+		for (int i=1;i<=22;i++) cartes[i] = new CarteDePaquet(i);
+	}
+	
 	/**
 	 * Valeur minimale que peut prendre une Carte dans un JeuDeCarte
 	 */
@@ -46,33 +30,42 @@ public class JeuDeCartes {
 	 */
 	public final static int VALEURMAX = 22;
 
-	// FIXME le commentaire ne correspond pas à la définition
+	// FIXME le commentaire ne correspond pas à la définition (fixed)
 	/**
-	 * Tableau d'entiers de 1 à 22 à occurence unique.
+	 * Tableau de CarteDePaquet de 1 à 22 à occurence unique.
 	 */
-	public Carte[] Paquet;
+	public CarteDePaquet[] paquet = new CarteDePaquet[23];
 
-	// FIXME Définir un seul tableau, dont le type peut être hérité de Carte
-	// pour ajouter la notion de distribuée/non distribuée
-	/**
-	 * 
-	 */
-	public boolean[] boolPaquet;
+
 
 	// FIXME compléter le commentaire
 	/**
 	 * 
 	 */
 	public JeuDeCartes() {
-
+		
+		
+		for (int i=1;i<=22;i++) 
+			this.paquet[i] = cartes[i];
 	}
 
+	/**
+	 * @return
+	 */
 	// FIXME ajouter une méthode permettant de tirer une carte au hasard dans le
 	// paquet
-
+	public CarteDePaquet tirerUneCarte(){
+	
+		int random;
+		while (this.paquet[random = (int) (Math.random() * (VALEURMAX - VALEURMIN) + VALEURMIN)].getValCarteTiree());
+		this.paquet[random].setValCarteTiree(true);
+		return this.paquet[random];
+	}
+	
 	// FIXME ajouter une méthode permettant de savoir combien il reste de cartes
-	// dans le paquet
-
+	// dans le paquet ( il reste 22 carte dans un paquet)
+	
+	
 	// FIXME compléter/corriger le commentaire
 	/**
 	 * @param nbCarteADistrib
@@ -81,23 +74,18 @@ public class JeuDeCartes {
 	 */
 	public Carte[] distribuer(int nbCarteADistrib) {
 		int i;
-		Carte[] retourn = new Carte[nbCarteADistrib];
+		Carte[] cartesDistribuees = new Carte[nbCarteADistrib];
 		for (i = 1; i <= nbCarteADistrib; i++) {
-			int y = (int) (Math.random() * (VALEURMAX - VALEURMIN) + VALEURMIN);
-			if ((this.boolPaquet[y])) {
-				retourn[i] = this.Paquet[y];
+			cartesDistribuees[i] = this.tirerUneCarte();
 			}
-			else
-				i--;
+		return cartesDistribuees;
 		}
-		return retourn;
-	}
 
 	public String toString() {
 		String chaineJeuDeCarte = "";
 		int i;
-		for (i = 1; i < 22; i++) {
-			chaineJeuDeCarte = chaineJeuDeCarte + this.Paquet[i].getValeurs();
+		for (i = 1; i <= 22; i++) {
+			chaineJeuDeCarte = chaineJeuDeCarte + this.paquet[i].getValeurs();
 		}
 		return chaineJeuDeCarte;
 	}

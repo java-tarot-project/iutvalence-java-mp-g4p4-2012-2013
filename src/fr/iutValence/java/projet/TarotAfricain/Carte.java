@@ -19,6 +19,9 @@ public class Carte {
 	private int valeurs; // {1..22};
 
 	// FIXME définir un constructeur
+	/**
+	 * @param i
+	 */
 	public Carte(int i) {
 		this.valeurs = i;
 	}
@@ -54,6 +57,9 @@ public class Carte {
 
 	}
 
+	/**
+	 * @return l'attribut valeurs de la Carte
+	 */
 	public int getValeurs() {
 		return this.valeurs;
 	}
