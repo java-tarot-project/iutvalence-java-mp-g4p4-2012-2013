@@ -79,7 +79,7 @@ public class Jouer {
 			for (int joueurCourant = 0; joueurCourant < 3; joueurCourant++) {
 				int i = joueurCourant + premierJoueur;
 				if (i > 3) i = i - 4;
-				this.table[i].setMain(this.jeuDeCarte.distribuer(nbCarte));
+				this.table[i].setMain(this.jeuDeCarte.distribuerNCartes(nbCarte));
 
 			}
 			// Mise des joueurs concernant les plis espérés

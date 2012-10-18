@@ -72,7 +72,7 @@ public class JeuDeCartes {
 	 *            représente le nombre de cartes à distribuer.
 	 * @return null
 	 */
-	public Carte[] distribuer(int nbCarteADistrib) {
+	public Carte[] distribuerNCartes(int nbCarteADistrib) {
 		int i;
 		Carte[] cartesDistribuees = new Carte[nbCarteADistrib];
 		for (i = 1; i <= nbCarteADistrib; i++) {
