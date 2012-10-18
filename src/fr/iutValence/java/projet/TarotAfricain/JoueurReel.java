@@ -6,7 +6,7 @@ package fr.iutValence.java.projet.TarotAfricain;
 // FIXME compléter le commentaire
 /**
  * @author theodorc
- *
+ * 
  */
 public class JoueurReel extends Joueur {
 
