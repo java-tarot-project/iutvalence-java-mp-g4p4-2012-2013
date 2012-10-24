@@ -1,11 +1,11 @@
 package fr.iutValence.java.projet.TarotAfricain;
 
 /**
- * @author CLUZE - THEODORE Classe définissant un "Joueur". Un joueur possède
- *         des points de vie une main composée de cartes d'un choix de mise
- *         d'une valeur.
+ * @author CLUZE - THEODORE Classe définissant un "Joueur". Un joueur possède des points de vie une main composée de
+ *         cartes d'un choix de mise d'une valeur.
  */
-public abstract class Joueur {
+public abstract class Joueur
+{
 
 	// FIXME détailler (en quoi cela est lié au jeu ?)
 	/**
@@ -37,7 +37,8 @@ public abstract class Joueur {
 	/**
 	 * Constructeur d'un Joueur Alloue 14 points de vie etc
 	 */
-	public Joueur() {
+	public Joueur()
+	{
 
 		// FIXME définir la valeur par défaut via une constante
 		this.pointDeVie = 14;
@@ -48,8 +49,7 @@ public abstract class Joueur {
 
 	// FIXME compléter le commentaire
 	/**
-	 * Mise définie par le joueur en fonction des cartes qu'il possède dans sa
-	 * main
+	 * Mise définie par le joueur en fonction des cartes qu'il possède dans sa main
 	 * 
 	 * @param nbCarte
 	 * @return int La mise
@@ -66,7 +66,8 @@ public abstract class Joueur {
 	/**
 	 * @return int
 	 */
-	public int getPointDeVie() {
+	public int getPointDeVie()
+	{
 
 		return this.pointDeVie;
 	}
@@ -75,7 +76,8 @@ public abstract class Joueur {
 	/**
 	 * @param distribuer
 	 */
-	public void setMain(Carte[] distribuer) {
+	public void setMain(Carte[] distribuer)
+	{
 		this.main = distribuer;
 
 	}
@@ -84,7 +86,8 @@ public abstract class Joueur {
 	/**
 	 * @param misej
 	 */
-	public void setMise(int misej) {
+	public void setMise(int misej)
+	{
 		this.mise = misej;
 
 	}
@@ -93,7 +96,8 @@ public abstract class Joueur {
 	/**
 	 * @param poserCarte
 	 */
-	public void setCartePosee(Carte poserCarte) {
+	public void setCartePosee(Carte poserCarte)
+	{
 		this.cartePosee = poserCarte;
 	}
 
@@ -101,7 +105,8 @@ public abstract class Joueur {
 	/**
 	 * @return cartePosee
 	 */
-	public Carte getCartePosee() {
+	public Carte getCartePosee()
+	{
 		return this.cartePosee;
 	}
 
@@ -109,7 +114,8 @@ public abstract class Joueur {
 	/**
 	 * @param i
 	 */
-	public void setPliRemporte(int i) {
+	public void setPliRemporte(int i)
+	{
 		this.pliRemporte = i;
 
 	}

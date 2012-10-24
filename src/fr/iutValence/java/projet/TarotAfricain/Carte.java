@@ -5,7 +5,8 @@ package fr.iutValence.java.projet.TarotAfricain;
  * 
  * @author CLUZE - THEODORE
  */
-public class Carte {
+public class Carte
+{
 
 	// FIXME faire en sorte qu'une carte ne puisse pas être modifiée une fois
 	// créée
@@ -13,8 +14,7 @@ public class Carte {
 	// FIXME si cela représente la valeur d'une carte, renommer l'attribut
 	// FIXME définir les constantes des cartes via une énumération
 	/**
-	 * valeurs possibles que peut prendre une carte. Une carte prend une valeur
-	 * entre 1 et 22.
+	 * valeurs possibles que peut prendre une carte. Une carte prend une valeur entre 1 et 22.
 	 */
 	private int valeurs; // {1..22};
 
@@ -22,28 +22,31 @@ public class Carte {
 	/**
 	 * @param i
 	 */
-	public Carte(int i) {
+	public Carte(int i)
+	{
 		this.valeurs = i;
 	}
 
 	/**
-	 * Méthode permettant de convertir la valeur de la carte en une chaîne de
-	 * caractères.
+	 * Méthode permettant de convertir la valeur de la carte en une chaîne de caractères.
 	 * 
 	 * @return String conversion de valeurs (int) en String.
 	 */
-	public String toString() {
+	public String toString()
+	{
 		return "" + this.valeurs;
 	}
 
 	// FIXME remplacer par la méthode compareTo de Comparable<Carte>
 	/**
 	 * @param carteGagnante
-	 * @return boolean un booléen à 1 si la carte est supérieure à carteGagnante
-	 *         à 0 si la carte est inférieure à carteGagnante.
+	 * @return boolean un booléen à 1 si la carte est supérieure à carteGagnante à 0 si la carte est inférieure à
+	 *         carteGagnante.
 	 */
-	public boolean superieure(Carte carteGagnante) {
-		if (this.valeurs >= carteGagnante.valeurs) return true;
+	public boolean superieure(Carte carteGagnante)
+	{
+		if (this.valeurs >= carteGagnante.valeurs)
+			return true;
 		else
 			return false;
 	}
@@ -52,7 +55,8 @@ public class Carte {
 	/**
 	 * @param i
 	 */
-	public void setValeurs(int i) {
+	public void setValeurs(int i)
+	{
 		this.valeurs = i;
 
 	}
@@ -60,7 +64,8 @@ public class Carte {
 	/**
 	 * @return l'attribut valeurs de la Carte
 	 */
-	public int getValeurs() {
+	public int getValeurs()
+	{
 		return this.valeurs;
 	}
 

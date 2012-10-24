@@ -1,21 +1,25 @@
 package fr.iutValence.java.projet.TarotAfricain;
 
-public class CarteDePaquet extends Carte{
+public class CarteDePaquet extends Carte
+{
 
 	private boolean carteTiree;
-	
-	public CarteDePaquet(int i) {
+
+	public CarteDePaquet(int i)
+	{
 		super(i);
-		this.carteTiree=false;
+		this.carteTiree = false;
 	}
 
-	public boolean getValCarteTiree() {
+	public boolean getValCarteTiree()
+	{
 		return this.carteTiree;
 	}
 
-	public void setValCarteTiree(boolean b) {
+	public void setValCarteTiree(boolean b)
+	{
 		this.carteTiree = b;
-		
+
 	}
 
 }
