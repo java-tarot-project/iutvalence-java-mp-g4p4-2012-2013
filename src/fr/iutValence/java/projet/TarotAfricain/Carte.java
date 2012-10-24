@@ -18,7 +18,7 @@ public class Carte
 	 */
 	private int valeurs; // {1..22};
 
-	// FIXME définir un constructeur
+	// FIXME compléter le commentaire
 	/**
 	 * @param i
 	 */
@@ -27,10 +27,9 @@ public class Carte
 		this.valeurs = i;
 	}
 
+
 	/**
-	 * Méthode permettant de convertir la valeur de la carte en une chaîne de caractères.
-	 * 
-	 * @return String conversion de valeurs (int) en String.
+	 * @see java.lang.Object#toString()
 	 */
 	public String toString()
 	{
@@ -51,7 +50,7 @@ public class Carte
 			return false;
 	}
 
-	// FIXME écrire un commentaire
+	// FIXME compléter le commentaire
 	/**
 	 * @param i
 	 */

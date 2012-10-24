@@ -6,18 +6,17 @@ package fr.iutValence.java.projet.TarotAfricain;
  * 
  * @author CLUZE - THEODORE
  */
-// FIXME renommer la classe (il y a plusieurs cartes dans le jeu : JeuDeCartes
-// ?) (fixed)
 public class JeuDeCartes
 {
 
-	// FIXME définir une constante par carte du paquet (pour n'avoir qu'un seul
-	// exemplaire de chaque carte par paquet) (fixed)
-
+	// FIXME définir le nombre de cartes du paquet comme une constante
+	
+	// FIXME pourquoi 23 cartes ?
 	static CarteDePaquet[] cartes = new CarteDePaquet[23];
 
 	static
 	{
+		// FIXME utiliser la constante
 		for (int i = 1; i <= 22; i++)
 			cartes[i] = new CarteDePaquet(i);
 	}
@@ -33,10 +32,14 @@ public class JeuDeCartes
 	public final static int VALEURMAX = 22;
 
 	// FIXME le commentaire ne correspond pas à la définition (fixed)
+	
+	
+	// FIXME définir en private
 	/**
+	 * 
 	 * Tableau de CarteDePaquet de 1 à 22 à occurence unique.
 	 */
-	public CarteDePaquet[] paquet = new CarteDePaquet[23];
+	public CarteDePaquet[] paquet = cartes;
 
 	// FIXME compléter le commentaire
 	/**
@@ -44,28 +47,26 @@ public class JeuDeCartes
 	 */
 	public JeuDeCartes()
 	{
-
+		// FIXME utiliser la constante
 		for (int i = 1; i <= 22; i++)
 			this.paquet[i] = cartes[i];
 	}
 
+	// FIXME compléter le commentaire 
 	/**
 	 * @return
 	 */
-	// FIXME ajouter une méthode permettant de tirer une carte au hasard dans le
-	// paquet
 	public CarteDePaquet tirerUneCarte()
 	{
 
 		int random;
-		while (this.paquet[random = (int) (Math.random() * (VALEURMAX - VALEURMIN) + VALEURMIN)].getValCarteTiree())
+		while (this.paquet[random = (int) (Math.random() * (VALEURMAX - VALEURMIN) + VALEURMIN)].estTiree())
 			;
-		this.paquet[random].setValCarteTiree(true);
+		this.paquet[random].tirer();
 		return this.paquet[random];
 	}
 
-	// FIXME ajouter une méthode permettant de savoir combien il reste de cartes
-	// dans le paquet ( il reste 22 carte dans un paquet)
+	// FIXME ajouter une méthode permettant de savoir combien il reste de cartes non tirées dans le paquet
 
 	// FIXME compléter/corriger le commentaire
 	/**
@@ -84,14 +85,16 @@ public class JeuDeCartes
 		return cartesDistribuees;
 	}
 
+	/**
+	 * @see java.lang.Object#toString()
+	 */
 	public String toString()
 	{
 		String chaineJeuDeCarte = "";
-		int i;
-		for (i = 1; i <= 22; i++)
-		{
+		
+		// FIXME utiliser la constante
+		for (int i = 1; i <= 22; i++)
 			chaineJeuDeCarte = chaineJeuDeCarte + this.paquet[i].getValeurs();
-		}
 		return chaineJeuDeCarte;
 	}
 }
