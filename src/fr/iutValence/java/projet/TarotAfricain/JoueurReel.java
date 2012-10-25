@@ -16,6 +16,7 @@ import java.io.UnsupportedEncodingException;
 public class JoueurReel extends Joueur
 {
 
+	
 	// FIXME compléter le commentaire
 	/**
 	 * 
@@ -34,6 +35,7 @@ public class JoueurReel extends Joueur
 		String s = null;
 		try
 		{
+			
 			s = br.readLine();
 			int i = Integer.parseInt(s);
 			isr.close();
