@@ -10,7 +10,7 @@ public class JeuDeCartes
 {
 
 	// FIXME définir le nombre de cartes du paquet comme une constante
-	
+
 	// FIXME pourquoi 23 cartes ?
 	static CarteDePaquet[] cartes = new CarteDePaquet[23];
 
@@ -32,8 +32,7 @@ public class JeuDeCartes
 	public final static int VALEURMAX = 22;
 
 	// FIXME le commentaire ne correspond pas à la définition (fixed)
-	
-	
+
 	// FIXME définir en private
 	/**
 	 * 
@@ -52,7 +51,7 @@ public class JeuDeCartes
 			this.paquet[i] = cartes[i];
 	}
 
-	// FIXME compléter le commentaire 
+	// FIXME compléter le commentaire
 	/**
 	 * @return
 	 */
@@ -91,9 +90,9 @@ public class JeuDeCartes
 	public String toString()
 	{
 		String chaineJeuDeCarte = "";
-		
-		// FIXME utiliser la constante
-		for (int i = 1; i <= 22; i++)
+
+		// FIXME utiliser la constante (fixed)
+		for (int i = VALEURMIN; i <= VALEURMAX; i++)
 			chaineJeuDeCarte = chaineJeuDeCarte + this.paquet[i].getValeurs();
 		return chaineJeuDeCarte;
 	}

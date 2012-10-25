@@ -6,9 +6,7 @@ package fr.iutValence.java.projet.TarotAfricain;
  *         test.
  */
 // FIXME renommer
-public interface affichageConsole
+public class AffichageConsole extends Affichage
 {
-
-	// A compléter lorsque les classes seront terminées.
 
 }

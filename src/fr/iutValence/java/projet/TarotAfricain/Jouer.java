@@ -6,12 +6,12 @@ package fr.iutValence.java.projet.TarotAfricain;
  */
 public class Jouer
 {
-	// FIXME définir en private
+	// FIXME définir en private (fixed)
 	/**
 	 * Joueur joueurReel représente la classe utilisée par le Joueur. Par le biais de cette classe, l'utilisateur va
 	 * être capable de jouer une partie de Tarot.
 	 */
-	public Joueur joueurReel;
+	private Joueur joueurReel;
 
 	/**
 	 * Joueur joueur simulée avec Intelligence Artificielle. Joueur fictif simulant un des 4 joueurs d'une partie. Non
@@ -36,13 +36,12 @@ public class Jouer
 	 */
 	private JeuDeCartes jeuDeCarte;
 
-	// FIXME initialiser l'attribut dans le constructeur 
+	// FIXME initialiser l'attribut dans le constructeur (fixed)
 	/**
 	 * Création d'une table de joueurs. Représentation sous forme d'un tableau de 4 joueurs. ( les quatre joueurs sont
 	 * censés être autour d'une table) Permet d'effectuer des actions communes sur les quatre joueurs.
 	 */
-	private Joueur table[] =
-		{ this.joueurReel, this.joueur1, this.joueur2, this.joueur3 };
+	private Joueur table[];
 
 	/**
 	 * Constructeur initialisant les joueurs et le jeu de cartes Création de quatre Joueurs, création d'un JeudeCarte
@@ -55,6 +54,10 @@ public class Jouer
 		this.joueur2 = new JoueurIA();
 		this.joueur3 = new JoueurIA();
 		this.jeuDeCarte = new JeuDeCartes();
+		this.table[0] = this.joueurReel;
+		this.table[1] = this.joueur1;
+		this.table[2] = this.joueur2;
+		this.table[3] = this.joueur3;
 	}
 
 	/**

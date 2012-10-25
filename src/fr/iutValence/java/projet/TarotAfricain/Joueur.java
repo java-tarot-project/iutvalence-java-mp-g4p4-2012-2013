@@ -1,5 +1,7 @@
 package fr.iutValence.java.projet.TarotAfricain;
 
+import java.io.IOException;
+
 /**
  * @author CLUZE - THEODORE Classe définissant un "Joueur". Un joueur possède des points de vie une main composée de
  *         cartes d'un choix de mise d'une valeur.
@@ -7,9 +9,12 @@ package fr.iutValence.java.projet.TarotAfricain;
 public abstract class Joueur
 {
 
-	// FIXME détailler (en quoi cela est lié au jeu ?)
+	private static final int POINTSDEVIEMAX = 14;
+
+	// FIXME détailler (en quoi cela est lié au jeu ?) (fixed)
 	/**
-	 * nombre de vies du joueur
+	 * Les points de vie d'un joueur représentent ses chances de succès. Chaque fois qu'il ne complète pas sa mise, le
+	 * joueur perd un point de vie. Lorsqu'un joueur n'a plus de points de vie, il perd la partie de Tarot Africain.
 	 */
 	private int pointDeVie;
 
@@ -40,8 +45,8 @@ public abstract class Joueur
 	public Joueur()
 	{
 
-		// FIXME définir la valeur par défaut via une constante
-		this.pointDeVie = 14;
+		// FIXME définir la valeur par défaut via une constante (fixed)
+		this.pointDeVie = POINTSDEVIEMAX;
 		this.pliRemporte = 0;
 
 		// FIXME tous les attributs doivent être initialisés
@@ -53,8 +58,9 @@ public abstract class Joueur
 	 * 
 	 * @param nbCarte
 	 * @return int La mise
+	 * @throws MiseException 
 	 */
-	abstract int mise(int nbCarte);
+	abstract int mise(int nbCarte) throws IOException, MiseException;
 
 	// FIXME compléter le commentaire
 	/**
