@@ -16,6 +16,9 @@ public class Lanceur
 		Joueur J4 = new JoueurIA();
 		
 		Affichage aff = new AffichageConsole();
+		
+		Jouer jou = new Jouer(J1,J2,J3,J4,aff);
+		
 	}
 
 }

@@ -1,6 +1,5 @@
 package fr.iutValence.java.projet.TarotAfricain;
 
-import java.io.IOException;
 
 // Vérifier les public/private !
 /**
@@ -43,22 +42,23 @@ public class Jouer
 	 */
 	public void jouer() throws MiseException, Exception
 	{
-
+		int premierJoueur = 0;
 		int nbCarte = 5;
 		while (true)
 		{
 
 			// Premier joueur du tour
-			int premierJoueur = 0;
+			
 
 			initPliRemporte();
 			// Distribution des cartes
 			for (int joueurCourant = 0; joueurCourant < 3; joueurCourant++)
 			{
+				// Le premier joueur n'est pas forcément le premier dans le tableau. 
 				int i = joueurCourant + premierJoueur;
 				if (i > 3)
 					i = i - 4;
-				this.table[joueurCourant].setMain(this.jeuDeCarte.distribuerNCartes(nbCarte));
+				this.table[i].setMain(this.jeuDeCarte.distribuerNCartes(nbCarte));
 
 			}
 			// Mise des joueurs concernant les plis espérés
@@ -93,6 +93,7 @@ public class Jouer
 				if (this.table[i].getPointDeVie() == 0)
 					break;
 			}
+			premierJoueur++;
 		}
 	}
 
