@@ -9,4 +9,36 @@ package fr.iutValence.java.projet.TarotAfricain;
 public class AffichageConsole extends Affichage
 {
 
+	
+	public void afficherMise(int i)
+	{
+		System.out.println(i);
+	}
+
+	@Override
+	public void afficherMain(Carte[] mainJoueur)
+	{
+		System.out.println("toi");
+		int i = mainJoueur.length;
+		System.out.println(i);
+		while(i >0) {
+			System.out.print(mainJoueur[i].toString()+" ");
+		}
+		
+	}
+
+	@Override
+	public void afficheDemandeMise()
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void afficheErreurMise()
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
 }

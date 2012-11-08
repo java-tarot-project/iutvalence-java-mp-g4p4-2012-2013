@@ -8,17 +8,14 @@ public class Test
 
 	public static void main(String[] args) throws Exception, IOException
 	{
-		Carte lala = new Carte(5);
-		JeuDeCartes lili = new JeuDeCartes();
-		Carte lolo = lili.tirerUneCarte();
-		JoueurReel moi = new JoueurReel();
-
-		System.out.println(lolo.toString());
-		System.out.println(lili.toString());
-		System.out.println(lala.toString());
-		int i = moi.mise(4);
+		Joueur moi = new JoueurReel();
+		
+		int i = moi.mise(5);
 		System.out.println(i);
 		
+		
+		
+	
 	}
 
 }

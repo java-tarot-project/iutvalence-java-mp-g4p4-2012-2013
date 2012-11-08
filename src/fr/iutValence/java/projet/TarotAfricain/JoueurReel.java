@@ -29,7 +29,7 @@ public class JoueurReel extends Joueur
 	@Override
 	int mise(int nbCarte) throws MiseException, IOException
 	{
-
+		Affichage.afficheDemandeMise();
 		InputStreamReader isr = new InputStreamReader(System.in, "US-ASCII");
 		BufferedReader br = new BufferedReader(isr);
 		String s = null;
@@ -47,7 +47,7 @@ public class JoueurReel extends Joueur
 		}
 		catch (Exception e)
 		{
-			System.out.println("pas un nombre");
+			Affichage.afficheErreurMise();
 			return mise(nbCarte);
 		}
 
@@ -59,5 +59,7 @@ public class JoueurReel extends Joueur
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+
 
 }

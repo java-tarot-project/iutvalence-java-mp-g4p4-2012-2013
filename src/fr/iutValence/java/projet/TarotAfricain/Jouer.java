@@ -1,36 +1,14 @@
 package fr.iutValence.java.projet.TarotAfricain;
 
+import java.io.IOException;
+
 // Vérifier les public/private !
 /**
  * @author CLUZE - THEODORE Classe définissant une partie
  */
 public class Jouer
 {
-	// FIXME définir en private (fixed)
-	/**
-	 * Joueur joueurReel représente la classe utilisée par le Joueur. Par le biais de cette classe, l'utilisateur va
-	 * être capable de jouer une partie de Tarot.
-	 */
-	private Joueur joueurReel;
-
-	/**
-	 * Joueur joueur simulée avec Intelligence Artificielle. Joueur fictif simulant un des 4 joueurs d'une partie. Non
-	 * accessible par l'utilisateur.
-	 */
-	private Joueur joueur1;
-
-	/**
-	 * Joueur joueur simulée avec Intelligence Artificielle. Joueur fictif simulant un des 4 joueurs d'une partie. Non
-	 * accessible par l'utilisateur.
-	 */
-	private Joueur joueur2;
-
-	/**
-	 * Joueur joueur simulée avec Intelligence Artificielle. Joueur fictif simulant un des 4 joueurs d'une partie. Non
-	 * accessible par l'utilisateur.
-	 */
-	private Joueur joueur3;
-
+	
 	/**
 	 * JeudeCarte simulant les différentes cartes auxquelles les joueurs pourront accéder.
 	 */
@@ -46,30 +24,27 @@ public class Jouer
 	/**
 	 * Constructeur initialisant les joueurs et le jeu de cartes Création de quatre Joueurs, création d'un JeudeCarte
 	 */
-	public Jouer()
+	public Jouer(Joueur joueur1,Joueur joueur2,Joueur joueur3,Joueur joueur4, Affichage aff)
 	{
 
-		this.joueurReel = new JoueurReel();
-		this.joueur1 = new JoueurIA();
-		this.joueur2 = new JoueurIA();
-		this.joueur3 = new JoueurIA();
 		this.jeuDeCarte = new JeuDeCartes();
-		this.table[0] = this.joueurReel;
-		this.table[1] = this.joueur1;
-		this.table[2] = this.joueur2;
-		this.table[3] = this.joueur3;
+		this.table[0] = joueur1;
+		this.table[1] = joueur2;
+		this.table[2] = joueur3;
+		this.table[3] = joueur4;
 	}
 
 	/**
 	 * Méthode initialisant une partie de Tarot Africain. Le principe est de distribuer {5,4,3,2,1} carte(s) aux quatre
 	 * joueurs. Suite à quoi les joueurs misent le nombre de plis susceptibles d'être remportés. Après la dernière phase
 	 * d'un tour (distribution d'une seule carte), le premier joueur devient son voisin de gauche.
+	 * @throws MiseException 
+	 * @throws Exception 
 	 */
-	public void jouer()
+	public void jouer() throws MiseException, Exception
 	{
 
 		int nbCarte = 5;
-
 		while (true)
 		{
 
@@ -83,7 +58,7 @@ public class Jouer
 				int i = joueurCourant + premierJoueur;
 				if (i > 3)
 					i = i - 4;
-				this.table[i].setMain(this.jeuDeCarte.distribuerNCartes(nbCarte));
+				this.table[joueurCourant].setMain(this.jeuDeCarte.distribuerNCartes(nbCarte));
 
 			}
 			// Mise des joueurs concernant les plis espérés

@@ -125,5 +125,12 @@ public abstract class Joueur
 		this.pliRemporte = i;
 
 	}
+	
+	/**
+	 * @return
+	 */
+	public Carte[] getMainJoueur() {
+		return this.main;
+	}
 
 }

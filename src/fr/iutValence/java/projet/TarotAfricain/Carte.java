@@ -7,18 +7,11 @@ package fr.iutValence.java.projet.TarotAfricain;
  */
 public class Carte
 {
-
-	// FIXME faire en sorte qu'une carte ne puisse pas être modifiée une fois
-	// créée (fixed)
-
-	// FIXME si cela représente la valeur d'une carte, renommer l'attribut (fixed)
-	// FIXME définir les constantes des cartes via une énumération
 	/**
 	 * valeurs possibles que peut prendre une carte. Une carte prend une valeur entre 1 et 22.
 	 */
 	private final int valeur; // {1..22};
 
-	// FIXME compléter le commentaire
 	/**
 	 * @param i
 	 */
