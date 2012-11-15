@@ -1,5 +1,7 @@
 package fr.iutValence.java.projet.TarotAfricain;
 
+import java.io.IOException;
+
 /**
  * @author theodorc
  *
@@ -33,10 +35,10 @@ public abstract class Affichage
 
 
 	/**
+	 * @throws IOException 
 	 * 
 	 */
-	public abstract void afficheDemandeMise();
-
+	public abstract void afficheMise();
 
 
 
@@ -44,5 +46,18 @@ public abstract class Affichage
 	 * 
 	 */
 	public abstract void afficheErreurMise();
+
+
+
+
+	/**
+	 * @return
+	 * @throws IOException
+	 */
+	public int demandeMise() throws IOException
+	{
+		// TODO Auto-generated method stub
+		return 0;
+	}
 
 }

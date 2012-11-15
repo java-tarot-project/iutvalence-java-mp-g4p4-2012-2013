@@ -23,6 +23,11 @@ public class Jouer
 
 	/**
 	 * Constructeur initialisant les joueurs et le jeu de cartes Création de quatre Joueurs, création d'un JeudeCarte
+	 * @param joueur1 Un des joueurs d'une partie. Peut être Réel ou IA.
+	 * @param joueur2 Un des joueurs d'une partie. Peut être Réel ou IA.
+	 * @param joueur3 Un des joueurs d'une partie. Peut être Réel ou IA.
+	 * @param joueur4 Un des joueurs d'une partie. Peut être Réel ou IA.
+	 * @param aff Affichage pouvant être console ou Graphique.
 	 */
 	public Jouer(Joueur joueur1,Joueur joueur2,Joueur joueur3,Joueur joueur4, Affichage aff)
 	{

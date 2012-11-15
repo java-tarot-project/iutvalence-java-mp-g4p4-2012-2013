@@ -1,5 +1,6 @@
 package fr.iutValence.java.projet.TarotAfricain;
 
+import java.io.*;
 // FIXME affichageConsole ne doit pas être une interface (fixed)
 /**
  * @author java-tarot-project classe permettant l'affichage en console d'une partie de Tarot et ses batteries de
@@ -27,11 +28,23 @@ public class AffichageConsole extends Affichage
 	}
 
 	@Override
-	public void afficheDemandeMise()
+	public int demandeMise()  throws IOException
 	{
-		// TODO Auto-generated method stub
-		
-	}
+
+		System.out.println("Veuillez miser sur le nombre de plis que vous gagnerez.");
+		int val = 0;
+		try {
+		      val = System.in.read();
+		    } catch (NumberFormatException ex) {
+		      System.err.println("Ce n'est pas un entier. ");
+		    } catch (IOException e) {
+		      System.err.println(" IO ERROR: " + e);
+		    }
+			return val;
+		 }
+
+			
+	
 
 	@Override
 	public void afficheErreurMise()
@@ -39,5 +52,14 @@ public class AffichageConsole extends Affichage
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public void afficheMise() throws IOException
+	{
+		this.demandeMise();
+		
+		
+	}
+
 
 }

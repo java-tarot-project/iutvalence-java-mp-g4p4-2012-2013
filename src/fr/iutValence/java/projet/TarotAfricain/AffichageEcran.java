@@ -19,8 +19,9 @@ public class AffichageEcran extends Affichage
 	}
 
 	@Override
-	public void afficheDemandeMise()
+	public int demandeMise()
 	{
+		return 0;
 		// TODO Auto-generated method stub
 		
 	}
@@ -31,5 +32,14 @@ public class AffichageEcran extends Affichage
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public void afficheMise()
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
+
 
 }
