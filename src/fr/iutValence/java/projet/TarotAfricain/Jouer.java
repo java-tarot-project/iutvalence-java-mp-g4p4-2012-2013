@@ -13,7 +13,6 @@ public class Jouer
 	 */
 	private JeuDeCartes jeuDeCarte;
 
-	// FIXME initialiser l'attribut dans le constructeur (fixed)
 	/**
 	 * Création d'une table de joueurs. Représentation sous forme d'un tableau de 4 joueurs. ( les quatre joueurs sont
 	 * censés être autour d'une table) Permet d'effectuer des actions communes sur les quatre joueurs.
@@ -27,6 +26,7 @@ public class Jouer
 	{
 
 		this.jeuDeCarte = new JeuDeCartes();
+		// FIXME à cet endroit l'attribut table ne référence pas un tableau, il n'est pas possible de remplir les cases
 		this.table[0] = joueur1;
 		this.table[1] = joueur2;
 		this.table[2] = joueur3;

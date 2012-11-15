@@ -31,9 +31,10 @@ public class JeuDeCartes
 	 */
 	public final static int VALEURMAX = 22;
 
-	// FIXME le commentaire ne correspond pas à la définition (fixed)
 
 	// FIXME définir en private
+	// FIXME initialiser l'attribut dans le constructeur
+	// FIXME il faut différencier l'attribut de la constante
 	/**
 	 * 
 	 * Tableau de CarteDePaquet de 1 à 22 à occurence unique.
@@ -90,8 +91,6 @@ public class JeuDeCartes
 	public String toString()
 	{
 		String chaineJeuDeCarte = "";
-
-		// FIXME utiliser la constante (fixed)
 		for (int i = VALEURMIN; i <= VALEURMAX; i++)
 			chaineJeuDeCarte = chaineJeuDeCarte + this.paquet[i].getValeurs();
 		return chaineJeuDeCarte;

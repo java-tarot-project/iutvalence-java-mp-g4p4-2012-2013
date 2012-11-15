@@ -11,7 +11,6 @@ public abstract class Joueur
 
 	private static final int POINTSDEVIEMAX = 14;
 
-	// FIXME détailler (en quoi cela est lié au jeu ?) (fixed)
 	/**
 	 * Les points de vie d'un joueur représentent ses chances de succès. Chaque fois qu'il ne complète pas sa mise, le
 	 * joueur perd un point de vie. Lorsqu'un joueur n'a plus de points de vie, il perd la partie de Tarot Africain.
@@ -44,8 +43,6 @@ public abstract class Joueur
 	 */
 	public Joueur()
 	{
-
-		// FIXME définir la valeur par défaut via une constante (fixed)
 		this.pointDeVie = POINTSDEVIEMAX;
 		this.pliRemporte = 0;
 
