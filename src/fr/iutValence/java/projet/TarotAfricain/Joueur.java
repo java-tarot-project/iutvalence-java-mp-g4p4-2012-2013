@@ -38,15 +38,17 @@ public abstract class Joueur
 	 */
 	private int pliRemporte;
 
+	private Affichage affiche;
+	
 	/**
 	 * Constructeur d'un Joueur Alloue 14 points de vie etc
 	 */
-	public Joueur()
+	public Joueur(Affichage aff)
 	{
 		this.pointDeVie = POINTSDEVIEMAX;
 		this.pliRemporte = 0;
-
-		// FIXME tous les attributs doivent être initialisés
+		this.mise = 0;
+		this.affiche=aff;
 	}
 
 	// FIXME compléter le commentaire
@@ -70,8 +72,7 @@ public abstract class Joueur
 	 * @return int
 	 */
 	public int getPointDeVie()
-	{
-
+	{	
 		return this.pointDeVie;
 	}
 

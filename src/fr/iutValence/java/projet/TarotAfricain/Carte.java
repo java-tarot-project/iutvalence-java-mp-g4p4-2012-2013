@@ -28,7 +28,7 @@ public class Carte
 		return "" + this.valeur;
 	}
 
-	// FIXME remplacer par la méthode compareTo de Comparable<Carte>
+	// FIXME remplacer par la méthode compareTo de Comparable<Carte> fixed
 	/**
 	 * @param carteGagnante
 	 * @return boolean un booléen à 1 si la carte est supérieure à carteGagnante à 0 si la carte est inférieure à
@@ -36,7 +36,7 @@ public class Carte
 	 */
 	public boolean superieure(Carte carteGagnante)
 	{
-		if (this.valeur >= carteGagnante.valeur)
+		if (this.compareTo(carteGagnante)>0)
 			return true;
 		else
 			return false;
@@ -79,6 +79,7 @@ public class Carte
 		return result;
 	}
 
-	// FIXME écrire (dans une autre classe) une application de test basique
+	// FIXME écrire (dans une autre classe) une application de test basique (deja fait est suprimé)(fixed)
+	
 
 }

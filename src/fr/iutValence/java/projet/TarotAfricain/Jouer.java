@@ -18,6 +18,8 @@ public class Jouer
 	 * censés être autour d'une table) Permet d'effectuer des actions communes sur les quatre joueurs.
 	 */
 	private Joueur table[];
+	
+	public Affichage affiche;
 
 	/**
 	 * Constructeur initialisant les joueurs et le jeu de cartes Création de quatre Joueurs, création d'un JeudeCarte
@@ -26,11 +28,15 @@ public class Jouer
 	{
 
 		this.jeuDeCarte = new JeuDeCartes();
-		// FIXME à cet endroit l'attribut table ne référence pas un tableau, il n'est pas possible de remplir les cases
+		// FIXME à cet endroit l'attribut table ne référence pas un tableau, il n'est pas possible de remplir les cases (fixed)
+		this.table = new Joueur[4];
 		this.table[0] = joueur1;
 		this.table[1] = joueur2;
 		this.table[2] = joueur3;
 		this.table[3] = joueur4;
+		this.affiche=aff;
+		
+		
 	}
 
 	/**
@@ -49,8 +55,8 @@ public class Jouer
 
 			// Premier joueur du tour
 			
-
 			initPliRemporte();
+			
 			// Distribution des cartes
 			for (int joueurCourant = 0; joueurCourant < 3; joueurCourant++)
 			{
@@ -85,8 +91,7 @@ public class Jouer
 			}
 			// decrementation de nbCarte
 			nbCarte--;
-			if (nbCarte == 0)
-				nbCarte = 5;
+			if (nbCarte == 0) nbCarte = 5;
 			// condition de fin de jeu
 			for (int i = 0; i < 3; i++)
 			{
@@ -94,7 +99,9 @@ public class Jouer
 					break;
 			}
 			premierJoueur++;
+			if(premierJoueur>3) premierJoueur=0;
 		}
+		
 	}
 
 	// FIXME compléter le commentaire

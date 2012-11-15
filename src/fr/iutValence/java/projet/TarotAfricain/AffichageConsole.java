@@ -1,11 +1,10 @@
 package fr.iutValence.java.projet.TarotAfricain;
 
-// FIXME affichageConsole ne doit pas être une interface
+// FIXME affichageConsole ne doit pas être une interface (fixed)
 /**
- * @author java-tarot-project Interface permettant l'affichage en console d'une partie de Tarot et ses batteries de
+ * @author java-tarot-project classe permettant l'affichage en console d'une partie de Tarot et ses batteries de
  *         test.
  */
-// FIXME renommer
 public class AffichageConsole extends Affichage
 {
 

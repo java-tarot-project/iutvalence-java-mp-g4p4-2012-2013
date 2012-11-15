@@ -17,13 +17,12 @@ public class JoueurReel extends Joueur
 {
 
 	
-	// FIXME compléter le commentaire
-	/**
-	 * 
-	 */
-	public JoueurReel()
-	{
 
+
+	public JoueurReel(Affichage aff)
+	{
+		super(aff);
+		// TODO Auto-generated constructor stub
 	}
 
 	@Override

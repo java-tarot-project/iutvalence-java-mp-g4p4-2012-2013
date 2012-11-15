@@ -8,13 +8,11 @@ package fr.iutValence.java.projet.TarotAfricain;
 public class JoueurIA extends Joueur
 {
 
-	// FIXME compléter le commentaire
-	/**
-	 * 
-	 */
-	public JoueurIA()
+
+	public JoueurIA(Affichage aff)
 	{
-		// TODO Auto-generated constructor stub
+		super(aff);
+	
 	}
 
 	@Override
