@@ -133,12 +133,8 @@ public class Joueur
 	 * @return
 	 */
 	public Carte[] getMainJoueur() {
+		
 		return this.main;
 	}
-	/**
-	 * Méthode permettant de lancer une procédure de demande de Mise à un joueur.
-	 */
-	public  void afficheDemandeMise()
-	{
-	}
+	
 }
