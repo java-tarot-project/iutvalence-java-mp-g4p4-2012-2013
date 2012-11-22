@@ -27,11 +27,16 @@ public class AffichageConsole extends Affichage
 		
 	}
 
+	/**
+	 * @param j Joueur à qui il est demandé de miser.
+	 * @return un entier
+	 * @throws IOException une erreur si ce n'est pas un entier
+	 */
 	@Override
-	public int demandeMise()  throws IOException
+	public int demandeMise(Joueur j)  throws IOException
 	{
 
-		System.out.println("Veuillez miser sur le nombre de plis que vous gagnerez.");
+		
 		int val = 0;
 		try {
 		      val = System.in.read();
@@ -43,22 +48,10 @@ public class AffichageConsole extends Affichage
 			return val;
 		 }
 
-			
-	
-
 	@Override
-	public void afficheErreurMise()
+	public void afficheMise(int mise)
 	{
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void afficheMise() throws IOException
-	{
-		this.demandeMise();
-		
-		
+		System.out.println("La mise est " + mise);
 	}
 
 

@@ -17,10 +17,11 @@ public class Lanceur
 	{
 	
 		Affichage aff = new AffichageConsole();
-		Joueur J1 = new JoueurReel(aff);
-		Joueur J2 = new JoueurIA(aff);
-		Joueur J3 = new JoueurIA(aff);
-		Joueur J4 = new JoueurIA(aff);
+		TypeDeJoueur typ =new JoueurReel();
+		Joueur J1 = new Joueur(aff,);
+		Joueur J2 = new Joueur();
+		Joueur J3 = new Joueur();
+		Joueur J4 = new Joueur();
 		
 		Jouer jou = new Jouer(J1,J2,J3,J4,aff);
 		jou.jouer();

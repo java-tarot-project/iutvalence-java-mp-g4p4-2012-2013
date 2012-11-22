@@ -57,6 +57,7 @@ public class Jouer
 		int nbCarte = 5;
 		while (true)
 		{
+			
 
 			// Premier joueur du tour
 			
@@ -72,20 +73,21 @@ public class Jouer
 				this.table[i].setMain(this.jeuDeCarte.distribuerNCartes(nbCarte));
 
 			}
+			
 			// Mise des joueurs concernant les plis espérés
 			for (int joueurCourant = 0; joueurCourant < 3; joueurCourant++)
 			{
 				int i = joueurCourant + premierJoueur;
 				if (i > 3)
 					i = i - 4;
-				this.table[i].setMise(this.table[joueurCourant].mise(nbCarte));
+				this.table[i].setMise( affiche.demandeMise(this.table[i]) );
 			}
-
+			
 			// Tour de jeu
 			for (int tour = 0; tour < nbCarte; tour++)
 			{
 				// Pli
-				for (int joueurCourant = 1; joueurCourant < 3; joueurCourant++)
+				for (int joueurCourant = 0; joueurCourant < 3; joueurCourant++)
 				{
 					int i = joueurCourant + premierJoueur;
 					if (i > 3)
@@ -94,6 +96,7 @@ public class Jouer
 				}
 				compareCartes();
 			}
+			
 			// decrementation de nbCarte
 			nbCarte--;
 			if (nbCarte == 0) nbCarte = 5;
@@ -118,7 +121,7 @@ public class Jouer
 		int joueurGagnant = 0;
 		Carte carteGagnante = new Carte(0);
 		carteGagnante = this.table[0].getCartePosee();
-		for (int i = 1; i < 3; i++)
+		for (int i = 0; i < 3; i++)
 		{
 			if (this.table[i].getCartePosee().superieure(carteGagnante))
 				joueurGagnant = i;

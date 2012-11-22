@@ -18,7 +18,7 @@ public abstract class Affichage
 	
 	
 	/**
-	 * @param i 
+	 * @param i paramètre pour un joueur d'indice i
 	 * 
 	 */
 	public abstract void afficherMise(int i);
@@ -38,26 +38,14 @@ public abstract class Affichage
 	 * @throws IOException 
 	 * 
 	 */
-	public abstract void afficheMise();
-
-
-
-	/**
-	 * 
-	 */
-	public abstract void afficheErreurMise();
+	public abstract void afficheMise(int mise);
 
 
 
 
-	/**
-	 * @return
-	 * @throws IOException
-	 */
-	public int demandeMise() throws IOException
-	{
-		// TODO Auto-generated method stub
-		return 0;
-	}
+
+
+
+	public abstract int demandeMise(Joueur j) throws IOException;
 
 }

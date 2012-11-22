@@ -6,7 +6,7 @@ import java.io.IOException;
  * @author CLUZE - THEODORE Classe définissant un "Joueur". Un joueur possède des points de vie une main composée de
  *         cartes d'un choix de mise d'une valeur.
  */
-public abstract class Joueur
+public class Joueur
 {
 
 	private static final int POINTSDEVIEMAX = 14;
@@ -43,12 +43,11 @@ public abstract class Joueur
 	/**
 	 * Constructeur d'un Joueur Alloue 14 points de vie etc
 	 */
-	public Joueur(Affichage aff)
+	public Joueur(Affichage aff,TypeDeJoueur joueur)
 	{
 		this.pointDeVie = POINTSDEVIEMAX;
 		this.pliRemporte = 0;
 		this.mise = 0;
-		this.affiche=aff;
 	}
 
 	// FIXME compléter le commentaire
@@ -59,13 +58,19 @@ public abstract class Joueur
 	 * @return int La mise
 	 * @throws MiseException 
 	 */
-	abstract int mise(int nbCarte) throws IOException, MiseException;
+	public int mise(int nbCarte) throws IOException, MiseException
+	{
+		return 0;
+	}
 
 	// FIXME compléter le commentaire
 	/**
 	 * @return une carte
 	 */
-	abstract Carte poserCarte();
+	public Carte poserCarte()
+	{
+		return null;
+	}
 
 	// FIXME compléter le commentaire
 	/**
@@ -130,5 +135,10 @@ public abstract class Joueur
 	public Carte[] getMainJoueur() {
 		return this.main;
 	}
-
+	/**
+	 * Méthode permettant de lancer une procédure de demande de Mise à un joueur.
+	 */
+	public  void afficheDemandeMise()
+	{
+	}
 }

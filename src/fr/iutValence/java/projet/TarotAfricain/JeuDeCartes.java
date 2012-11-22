@@ -24,7 +24,7 @@ public class JeuDeCartes
 	static
 	{
 		// FIXME (fixed)
-		for (int i = 1; i <= NBCARTESMAX; i++)
+		for (int i = 0; i < NBCARTESMAX; i++)
 			cartes[i] = new CarteDePaquet(i);
 	}
 
@@ -55,7 +55,7 @@ public class JeuDeCartes
 		 */
 		this.paquet = new CarteDePaquet[NBCARTESMAX];
 		// FIXME utiliser la constante (fixed)
-		for (int i = 1; i <= NBCARTESMAX; i++)
+		for (int i = 0; i < NBCARTESMAX; i++)
 			this.paquet[i] = cartes[i];
 
 	}
@@ -100,7 +100,7 @@ public class JeuDeCartes
 	{
 		int i;
 		Carte[] cartesDistribuees = new Carte[nbCarteADistrib];
-		for (i = 1; i <= nbCarteADistrib; i++)
+		for (i = 0; i < nbCarteADistrib; i++)
 		{
 			cartesDistribuees[i] = this.tirerUneCarte();
 		}
