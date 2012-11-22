@@ -13,7 +13,8 @@ public class Carte
 	private final int valeur; // {1..22};
 
 	/**
-	 * @param i
+	 * Constructeur d'une carte.
+	 * @param i représente la valeur donnée à une carte.
 	 */
 	public Carte(int i)
 	{
@@ -30,7 +31,7 @@ public class Carte
 
 	// FIXME remplacer par la méthode compareTo de Comparable<Carte> fixed
 	/**
-	 * @param carteGagnante
+	 * @param carteGagnante Carte en paramètre utilisée pour être comparée à une autre.
 	 * @return boolean un booléen à 1 si la carte est supérieure à carteGagnante à 0 si la carte est inférieure à
 	 *         carteGagnante.
 	 */
@@ -43,7 +44,7 @@ public class Carte
 	}
 
 	/**
-	 * @param carte
+	 * @param carte paramètre comparé.
 	 * @return a negative integer, zero, or a positive integer as this object is less than, equal to, or greater than
 	 *         the specified object.
 	 */
@@ -63,8 +64,8 @@ public class Carte
 
 	// FIXME redéfinir equals et hashCode (fixed)
 	/**
-	 * @param carte
-	 * @return
+	 * @param carte Carte en paramètre utilisée pour comparer sa valeur.
+	 * @return un booléen {0,1} 0 si valeurs différentes, 1 si égales.
 	 */
 	public boolean equals(Carte carte)
 	{

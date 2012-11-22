@@ -42,6 +42,9 @@ public class JeuDeCartes
 
 	// FIXME il faut différencier l'attribut de la constante (fixed)
 
+	/**
+	 * 
+	 */
 	private CarteDePaquet[] paquet;
 	// FIXME fixed
 	/**

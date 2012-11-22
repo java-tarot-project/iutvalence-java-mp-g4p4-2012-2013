@@ -9,6 +9,9 @@ import java.io.IOException;
 public class Joueur
 {
 
+	/**
+	 * 
+	 */
 	private static final int POINTSDEVIEMAX = 14;
 
 	/**
@@ -38,6 +41,9 @@ public class Joueur
 	 */
 	private int pliRemporte;
 
+	/**
+	 * 
+	 */
 	private Affichage affiche;
 	
 	/**

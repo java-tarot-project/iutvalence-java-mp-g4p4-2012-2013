@@ -1,6 +1,5 @@
 package fr.iutValence.java.projet.TarotAfricain;
 
-import java.io.IOException;
 
 /**
  * @author theodorc
@@ -18,6 +17,7 @@ public abstract class Affichage
 	
 	
 	/**
+	 * afficherMise est une méthode permettant d'afficher la Mise d'un joueur.
 	 * @param i paramètre pour un joueur d'indice i
 	 * 
 	 */
@@ -27,25 +27,8 @@ public abstract class Affichage
 
 
 	/**
-	 * @param mainJoueur
+	 * afficherMain est une méthode permettant d'afficher la liste des cartes (main) que possède un joueur.
+	 * @param mainJoueur tableau de cartes appartenant à un joueur.
 	 */
 	public abstract void afficherMain(Carte[] mainJoueur);
-
-
-
-
-	/**
-	 * @throws IOException 
-	 * 
-	 */
-	public abstract void afficheMise(int mise);
-
-
-
-
-
-
-
-	public abstract int demandeMise(Joueur j) throws IOException;
-
 }

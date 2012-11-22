@@ -1,32 +1,46 @@
 package fr.iutValence.java.projet.TarotAfricain;
 
 // FIXME écrire un commentaire
+/**
+ * @author theodorc
+ *
+ */
 public class CarteDePaquet extends Carte
 {
-	// FIXME écrire un commentaire
+	/**
+	 * 
+	 */
 	private boolean carteTiree;
 
-	// FIXME écrire un commentaire
+	/**
+	 * @param i Carte de paquet n°i
+	 */
 	public CarteDePaquet(int i)
 	{
 		super(i);
 		this.carteTiree = false;
 	}
 
-	// FIXME écrire un commentaire
+	/**
+	 * @return un booléen {0,1} selon si une carte a été tirée ou non.
+	 */
 	public boolean estTiree()
 	{
 		return this.carteTiree;
 	}
 
-	// FIXME écrire un commentaire
+	/**
+	 * 
+	 */
 	public void tirer()
 	{
 		this.carteTiree = true;
 
 	}
 
-	// FIXME écrire un commentaire
+	/**
+	 * 
+	 */
 	public void remettre()
 	{
 		this.carteTiree = false;

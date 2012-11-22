@@ -19,6 +19,9 @@ public class Jouer
 	 */
 	private Joueur table[];
 	
+	/**
+	 * 
+	 */
 	public Affichage affiche;
 
 	/**
@@ -33,7 +36,6 @@ public class Jouer
 	{
 
 		this.jeuDeCarte = new JeuDeCartes();
-		// FIXME à cet endroit l'attribut table ne référence pas un tableau, il n'est pas possible de remplir les cases (fixed)
 		this.table = new Joueur[4];
 		this.table[0] = joueur1;
 		this.table[1] = joueur2;
@@ -48,8 +50,8 @@ public class Jouer
 	 * Méthode initialisant une partie de Tarot Africain. Le principe est de distribuer {5,4,3,2,1} carte(s) aux quatre
 	 * joueurs. Suite à quoi les joueurs misent le nombre de plis susceptibles d'être remportés. Après la dernière phase
 	 * d'un tour (distribution d'une seule carte), le premier joueur devient son voisin de gauche.
-	 * @throws MiseException 
-	 * @throws Exception 
+	 * @throws MiseException Exception soulevée selon la donnée entrée en paramètre par l'utilisateur
+	 * @throws Exception Exception soulevée
 	 */
 	public void jouer() throws MiseException, Exception
 	{
@@ -80,7 +82,7 @@ public class Jouer
 				int i = joueurCourant + premierJoueur;
 				if (i > 3)
 					i = i - 4;
-				this.table[i].setMise( affiche.demandeMise(this.table[i]) );
+				this.table[i].setMise(this.table[i].mise(nbCarte) );
 			}
 			
 			// Tour de jeu
@@ -111,8 +113,6 @@ public class Jouer
 		}
 		
 	}
-
-	// FIXME compléter le commentaire
 	/**
 	 * @return int l'indice dans du joueur ayant gagné un pli.
 	 **/
