@@ -9,22 +9,21 @@ package fr.iutValence.java.projet.TarotAfricain;
 public class JeuDeCartes
 {
 
-	// FIXME définir le nombre de cartes du paquet comme une constante (fixed)
+	
 	/**
 	 * Constante désignant le nombre maximum de cartes dans un paquet.
 	 */
-	public final static int NBCARTESMAX = 22;
+	public final static int NB_CARTES_MAX = 22;
 	
 	/**
 	 * 
 	 */
-	// FIXME  (fixed)
-	static CarteDePaquet[] cartes = new CarteDePaquet[NBCARTESMAX];
+	// FIXME  commentaire
+	static CarteDePaquet[] cartes = new CarteDePaquet[NB_CARTES_MAX];
 
 	static
 	{
-		// FIXME (fixed)
-		for (int i = 0; i < NBCARTESMAX; i++)
+		for (int i = 0; i < NB_CARTES_MAX; i++)
 			cartes[i] = new CarteDePaquet(i);
 	}
 
@@ -45,8 +44,9 @@ public class JeuDeCartes
 	/**
 	 * 
 	 */
+	// FIXME  commentaire
 	private CarteDePaquet[] paquet;
-	// FIXME fixed
+	
 	/**
 	 * Constructeur d'un Jeu de Cartes.
 	 */
@@ -56,14 +56,12 @@ public class JeuDeCartes
 		 * 
 		 * Tableau de CarteDePaquet de 1 à 22 à occurence unique.
 		 */
-		this.paquet = new CarteDePaquet[NBCARTESMAX];
-		// FIXME utiliser la constante (fixed)
-		for (int i = 0; i < NBCARTESMAX; i++)
+		this.paquet = new CarteDePaquet[NB_CARTES_MAX];
+		for (int i = 0; i < NB_CARTES_MAX; i++)
 			this.paquet[i] = cartes[i];
 
 	}
 
-	// FIXME compléter le commentaire (fixed)
 	/**
 	 * Méthode tirerUneCarte permet de sélectionner aléatoirement une carte dans un paquet de Carte.</br>
 	 * Si la carte n'a pas déjà été tirée ( méthode CarteDePaquet.estTiree() renvoie un booléen ), </br>
@@ -87,12 +85,11 @@ public class JeuDeCartes
 	public int CartesRestantesDansPaquet()
 	{
 		int res = 0;
-		for (int i =0; i<NBCARTESMAX;i++)
+		for (int i =0; i<NB_CARTES_MAX;i++)
 			if(this.paquet[i].estTiree()==false) res++;
 		return res;
 	}
 	
-	// FIXME compléter/corriger le commentaire (fixed)
 	/**
 	 * Méthode permettant de générer un tableau de N Cartes à partir d'un paquet.
 	 * @param nbCarteADistrib

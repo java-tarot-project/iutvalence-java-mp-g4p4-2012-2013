@@ -29,7 +29,6 @@ public class Carte
 		return "" + this.valeur;
 	}
 
-	// FIXME remplacer par la méthode compareTo de Comparable<Carte> fixed
 	/**
 	 * @param carteGagnante Carte en paramètre utilisée pour être comparée à une autre.
 	 * @return boolean un booléen à 1 si la carte est supérieure à carteGagnante à 0 si la carte est inférieure à
@@ -37,6 +36,7 @@ public class Carte
 	 */
 	public boolean superieure(Carte carteGagnante)
 	{
+		// FIXME simplifier
 		if (this.compareTo(carteGagnante)>0)
 			return true;
 		else
@@ -62,7 +62,7 @@ public class Carte
 		return this.valeur;
 	}
 
-	// FIXME redéfinir equals et hashCode (fixed)
+	// FIXME ce n'est pas une redéfinition de equals(Object o)
 	/**
 	 * @param carte Carte en paramètre utilisée pour comparer sa valeur.
 	 * @return un booléen {0,1} 0 si valeurs différentes, 1 si égales.
@@ -72,6 +72,9 @@ public class Carte
 		return this.valeur == carte.valeur;
 	}
 
+	/**
+	 * @see java.lang.Object#hashCode()
+	 */
 	public int hashCode()
 	{
 		int result = 1;
@@ -80,7 +83,6 @@ public class Carte
 		return result;
 	}
 
-	// FIXME écrire (dans une autre classe) une application de test basique (deja fait est suprimé)(fixed)
 	
 
 }
