@@ -11,6 +11,19 @@ import java.io.InputStreamReader;
 public class TypeJoueurReel extends TypeDeJoueur
 {
 
+	public static String lireClavier(){
+		String ligne = null;
+		try{
+			InputStreamReader lecteur=new InputStreamReader(System.in);
+			BufferedReader entree=new BufferedReader(lecteur);
+		ligne = entree.readLine();
+		}
+		catch(IOException err){
+			
+		}
+	
+		return ligne;
+		} 
 	
 	@Override
 	public int attribueMise(int nbCarte)
@@ -40,24 +53,13 @@ public class TypeJoueurReel extends TypeDeJoueur
 	}
 
 	
-	public static String lireClavier(){
-		String ligne = null;
-		try{
-			InputStreamReader lecteur=new InputStreamReader(System.in);
-			BufferedReader entree=new BufferedReader(lecteur);
-		ligne = entree.readLine();
-		}
-		catch(IOException err){
-			
-		}
 	
-		return ligne;
-		} 
 	
 
 	public Carte attribueCartePoser(Carte[] cartes)
 	{
 		return null;
+		
 		
 	}
 
