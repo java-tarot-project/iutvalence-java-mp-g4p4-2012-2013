@@ -7,22 +7,27 @@ package fr.iutValence.java.projet.TarotAfricain;
 public class AffichageConsole extends Affichage
 {
 
-	
-	public void afficherMise(int i)
+	@Override
+	public void afficherMise(Carte[] cartes, TypeDeJoueur typeDeJ)
 	{
-		System.out.println(i);
+		if (typeDeJ.getEstReel()) {
+			System.out.println("veuiller entrée votre mise");
+		}
+		
 	}
 
 	@Override
-	public void afficherMain(Carte[] mainJoueur)
+	public void afficherMain(Carte[] mainJoueur, TypeDeJoueur typeDeJ)
 	{
-		System.out.println("toi");
-		int i = mainJoueur.length;
-		System.out.println(i);
-		while(i >0) {
-			System.out.print(mainJoueur[i].toString()+" ");
-		}
 		
+		if (typeDeJ.getEstReel()) {
+			int i = mainJoueur.length;
+			while(i >0) {
+				System.out.print(mainJoueur[i-1].toString()+" ");
+				i--;
+			}
+			System.out.println();
+		}
 	}
 
 

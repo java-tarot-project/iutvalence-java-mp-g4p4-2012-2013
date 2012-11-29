@@ -60,13 +60,13 @@ public class Jouer
 		while (true)
 		{
 			
-
+			
 			// Premier joueur du tour
 			
 			initPliRemporte();
 			
 			// Distribution des cartes
-			for (int joueurCourant = 0; joueurCourant < 3; joueurCourant++)
+			for (int joueurCourant = 0; joueurCourant <= 3; joueurCourant++)
 			{
 				// Le premier joueur n'est pas forcément le premier dans le tableau. 
 				int i = joueurCourant + premierJoueur;
@@ -77,7 +77,7 @@ public class Jouer
 			}
 			
 			// Mise des joueurs concernant les plis espérés
-			for (int joueurCourant = 0; joueurCourant < 3; joueurCourant++)
+			for (int joueurCourant = 0; joueurCourant <= 3; joueurCourant++)
 			{
 				int i = joueurCourant + premierJoueur;
 				if (i > 3)
@@ -85,11 +85,14 @@ public class Jouer
 				this.table[i].setMise(this.table[i].mise(nbCarte) );
 			}
 			
+			
+			
 			// Tour de jeu
 			for (int tour = 0; tour < nbCarte; tour++)
 			{
 				// Pli
-				for (int joueurCourant = 0; joueurCourant < 3; joueurCourant++)
+				
+				for (int joueurCourant = 0; joueurCourant <= 3; joueurCourant++)
 				{
 					int i = joueurCourant + premierJoueur;
 					if (i > 3)

@@ -47,13 +47,20 @@ public class Joueur
 	private Affichage affiche;
 	
 	/**
+	 * 
+	 */
+	private TypeDeJoueur typeDeJ;
+	
+	/**
 	 * Constructeur d'un Joueur Alloue 14 points de vie etc
 	 */
 	public Joueur(Affichage aff,TypeDeJoueur joueur)
 	{
+		this.affiche = aff;
 		this.pointDeVie = POINTSDEVIEMAX;
 		this.pliRemporte = 0;
 		this.mise = 0;
+		this.typeDeJ = joueur;
 	}
 
 	// FIXME compléter le commentaire
@@ -66,16 +73,20 @@ public class Joueur
 	 */
 	public int mise(int nbCarte) throws IOException, MiseException
 	{
-		return 0;
+		this.affiche.afficherMain(getMainJoueur(), this.typeDeJ);
+		this.affiche.afficherMise(getMainJoueur(), this.typeDeJ);
+		return this.typeDeJ.attribueMise(nbCarte);
 	}
 
 	// FIXME compléter le commentaire
 	/**
-	 * @return une carte
+	 * @return une carte 
 	 */
-	public Carte poserCarte()
+	public Carte poserCarte() throws IOException
 	{
-		return null;
+
+		this.affiche.afficherMain(getMainJoueur(), this.typeDeJ);
+		return this.typeDeJ.attribueCartePoser(getMainJoueur());
 	}
 
 	// FIXME compléter le commentaire
