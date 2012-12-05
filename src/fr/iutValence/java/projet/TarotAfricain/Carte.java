@@ -71,8 +71,7 @@ public class Carte
 	{
 		return this.valeur;
 	}
-	// TODO Verifier si le FIXME est corrigé.
-	// FIXME ce n'est pas une redéfinition de equals(Object o)
+
 	/**
 	 * @param carte Carte en paramètre utilisée pour comparer sa valeur.
 	 * @return un booléen {0,1} 0 si valeurs différentes, 1 si égales.

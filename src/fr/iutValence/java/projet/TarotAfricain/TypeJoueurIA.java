@@ -1,5 +1,9 @@
 package fr.iutValence.java.projet.TarotAfricain;
 
+/**
+ * @author Jambon
+ *
+ */
 public class TypeJoueurIA implements TypeDeJoueur
 {
 

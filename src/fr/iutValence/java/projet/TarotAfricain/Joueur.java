@@ -1,6 +1,6 @@
 package fr.iutValence.java.projet.TarotAfricain;
 
-import java.io.IOException;
+
 
 /**
  * @author CLUZE - THEODORE Classe définissant un "Joueur". Un joueur possède des points de vie une main composée de
@@ -63,44 +63,46 @@ public class Joueur
 		this.typeDeJ = joueur;
 	}
 
-	// FIXME compléter le commentaire
 	/**
-	 * Mise définie par le joueur en fonction des cartes qu'il possède dans sa main
-	 * 
-	 * @param nbCarte
-	 * @return int La mise
-	 * @throws MiseException 
+	 * Méthode permettant de traiter la mise.
+	 * Une mise est définie par le choix d'un entier représentatif du nombre de plis\n
+	 * que l'on espère remporter au cours d'un tour de jeu.
+	 * @param nbCarte entier désignant le nombre de cartes que possède un Joueur\n
+	 * Cela permet de définir une borne maximale pour le choix de la mise.
+	 * @return int renvoie un entier caractéristique du nombre espéré de plis remportés.
 	 */
-	public int mise(int nbCarte) throws IOException, MiseException
+	public int mise(int nbCarte) 
 	{
 		this.affiche.afficherMain(getMainJoueur(), this.typeDeJ);
 		this.affiche.afficherMise(getMainJoueur(), this.typeDeJ);
 		return this.typeDeJ.attribueMise(nbCarte);
 	}
 
-	// FIXME compléter le commentaire
 	/**
-	 * @return une carte 
+	 * La méthode poserCarte permet à l'utilisateur de poser une carte sur le tapis \n
+	 * afin de confronter sa carte à celles des trois autres joueurs.
+	 * @return une carte représentant la carte choisie par le joueur.
 	 */
-	public Carte poserCarte() throws IOException
+	public Carte poserCarte()
 	{
-
 		this.affiche.afficherMain(getMainJoueur(), this.typeDeJ);
 		return this.typeDeJ.attribueCartePosees(getMainJoueur());
 	}
 
-	// FIXME compléter le commentaire
+	
 	/**
-	 * @return int
+	 * Méthode simple permettant de désigner les points de vie restant d'un joueur.
+	 * @return int renvoie un entier correspondant aux points de vie restant.
 	 */
 	public int getPointDeVie()
 	{	
 		return this.pointDeVie;
 	}
 
-	// FIXME compléter le commentaire
 	/**
-	 * @param distribuer
+	 * La méthode setMain permet de remplir la main d'un joueur avec un tableau de cartes tirées aléatoirement.\n
+	 * Cette méthode utiliser la fonction distribuerNCartes de l'objet JeuDeCartes, qui renvoie un tableau de cartes tirées aléatoirement.\n
+	 * @param distribuer renvoie un tableau de cartes.
 	 */
 	public void setMain(Carte[] distribuer)
 	{
@@ -108,9 +110,9 @@ public class Joueur
 
 	}
 
-	// FIXME compléter le commentaire
 	/**
-	 * @param misej
+	 * Méthode simple permettant de mémoriser pour un joueur donné la mise qu'il a choisi pour un tour donné.
+	 * @param misej un entier représentant la mise
 	 */
 	public void setMise(int misej)
 	{
@@ -118,28 +120,29 @@ public class Joueur
 
 	}
 
-	// FIXME compléter le commentaire
+
 	/**
-	 * @param poserCarte
+	 * Méthode simple dont le paramètre représente la carte selectionnée par le joueur lors d'un pli.
+	 * @param poserCarte carte à mémoriser 
 	 */
 	public void setCartePosee(Carte poserCarte)
 	{
 		this.cartePosee = poserCarte;
 	}
 
-	// FIXME compléter le commentaire
 	/**
-	 * @return cartePosee
+	 * Méthode simple permettant de désigner la carte posée lors du pli.
+	 * @return renvoie la carte posée
 	 */
 	public Carte getCartePosee()
 	{
 		return this.cartePosee;
 	}
 
-	// FIXME compléter le commentaire
+
 	/**
-	 * @param i
-	 */
+	 * Méthode simple dont le paramètre représente le nombre de plis remportés lors d'un tour.
+	 * @param i entier à mémoriser	 */
 	public void setPliRemporte(int i)
 	{
 		this.pliRemporte = i;
@@ -147,7 +150,8 @@ public class Joueur
 	}
 	
 	/**
-	 * @return
+	 * Méthode simple permettant de désigner la main d'un joueur.
+	 * @return renvoie la main d'un joueur, un tableau de cartes.
 	 */
 	public Carte[] getMainJoueur() {
 		

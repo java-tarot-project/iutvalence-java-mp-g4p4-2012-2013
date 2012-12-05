@@ -18,7 +18,6 @@ public class JeuDeCartes
 	/**
 	 * 
 	 */
-	// FIXME  commentaire
 	static CarteDePaquet[] cartes = new CarteDePaquet[NB_CARTES_MAX];
 
 	static
@@ -42,9 +41,9 @@ public class JeuDeCartes
 	// FIXME il faut différencier l'attribut de la constante (fixed)
 
 	/**
-	 * 
+	 * Tableau de CarteDePaquet
+	 * L'objet CarteDePaquet est utilisé pour son attribut supplémentaire : un booléen carteTiree
 	 */
-	// FIXME  commentaire
 	private CarteDePaquet[] paquet;
 	
 	/**
