@@ -1,6 +1,6 @@
 package fr.iutValence.java.projet.TarotAfricain;
 
-public class TypeJoueurIA extends TypeDeJoueur
+public class TypeJoueurIA implements TypeDeJoueur
 {
 
 	@Override
@@ -10,13 +10,13 @@ public class TypeJoueurIA extends TypeDeJoueur
 	}
 
 	@Override
-	public boolean getEstReel()
+	public boolean estReel()
 	{
 		return false;
 	}
 
 	@Override
-	public Carte attribueCartePoser(Carte[] cartes)
+	public Carte attribueCartePosees(Carte[] cartes)
 	{
 
 		return null;

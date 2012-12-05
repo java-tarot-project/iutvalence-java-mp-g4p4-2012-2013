@@ -1,20 +1,31 @@
 package fr.iutValence.java.projet.TarotAfricain;
 
-import java.io.IOException;
 
 /**
  * @author theodorc
  *
  */
-public abstract class TypeDeJoueur
+public interface  TypeDeJoueur
 {
-
-	private boolean estReel;
 	
+	/**
+	 * @param nbCarte
+	 * @return
+	 */
 	public abstract int attribueMise(int nbCarte);
 	
-	public abstract boolean getEstReel();
+	
+	/**
+	 * @return renvoie 0 pour une Intelligence Artificielle\n
+	 * renvoie 1 pour un Joueur réel.\n
+	 */
+	public abstract boolean estReel();
 
-	public abstract Carte attribueCartePoser(Carte[] cartes);
+	
+	/**
+	 * @param cartes
+	 * @return
+	 */
+	public abstract Carte attribueCartePosees(Carte[] cartes);
 	
 }

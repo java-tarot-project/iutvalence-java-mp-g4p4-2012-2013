@@ -86,7 +86,7 @@ public class Joueur
 	{
 
 		this.affiche.afficherMain(getMainJoueur(), this.typeDeJ);
-		return this.typeDeJ.attribueCartePoser(getMainJoueur());
+		return this.typeDeJ.attribueCartePosees(getMainJoueur());
 	}
 
 	// FIXME compléter le commentaire

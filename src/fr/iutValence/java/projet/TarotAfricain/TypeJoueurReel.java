@@ -8,9 +8,13 @@ import java.io.InputStreamReader;
  * @author theodorc
  *
  */
-public class TypeJoueurReel extends TypeDeJoueur
+public class TypeJoueurReel implements TypeDeJoueur
 {
 
+	/**
+	 * lireClavier est une méthode permettant de créer une chaîne de caractères à partir d'une lecture System.in.
+	 * @return renvoie une chaîne de caractères.
+	 */
 	public static String lireClavier(){
 		String ligne = null;
 		try{
@@ -47,7 +51,7 @@ public class TypeJoueurReel extends TypeDeJoueur
 	
 
 	@Override
-	public boolean getEstReel()
+	public boolean estReel()
 	{
 		return true;
 	}
@@ -56,7 +60,7 @@ public class TypeJoueurReel extends TypeDeJoueur
 	
 	
 
-	public Carte attribueCartePoser(Carte[] cartes)
+	public Carte attribueCartePosees(Carte[] cartes)
 	{
 		return null;
 		

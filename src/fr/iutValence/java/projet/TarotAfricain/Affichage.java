@@ -7,18 +7,9 @@ package fr.iutValence.java.projet.TarotAfricain;
  * Description des appels des méthodes pour les affichages spécifiques { console, graphique }.\n
  * Affichage implémente des fonctions d'affichage permettant à l'utilisateur d'avoir une trace de l'exécution du jeu.
  */
-public abstract class Affichage
+public interface Affichage
 {
 
-	/**
-	 * Constructeur propre à Affichage.
-	 * Permet l'initialisation d'un affichage.
-	 */
-	//TODO Compléter ici le constructeur
-	 public Affichage(){ }
-	
-		
-	
 	
 	/**
 	 * afficherMise est une méthode permettant d'afficher la Mise d'un joueur.
