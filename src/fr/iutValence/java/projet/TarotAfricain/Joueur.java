@@ -87,6 +87,7 @@ public class Joueur
 	public Carte poserCarte()
 	{
 		this.affiche.afficherMain(getMainJoueur(), this.typeDeJ);
+		this.affiche.afficheCarte(getMainJoueur(), this.typeDeJ);
 		return this.typeDeJ.attribueCartePosees(getMainJoueur());
 	}
 
@@ -142,11 +143,19 @@ public class Joueur
 
 
 	/**
-	 * Méthode simple dont le paramètre représente le nombre de plis remportés lors d'un tour.
-	 * @param i entier à mémoriser	 */
-	public void setPliRemporte(int i)
+	 * Méthode simple qui ajoute un plie remporter.
+	 */
+	public void setPliRemporte()
 	{
-		this.pliRemporte = i;
+		this.pliRemporte++;
+
+	}
+	/**
+	 * Méthode permettant d'initialiser le nombre de plis remportés lors d'un tour de jeu.
+	 */
+	public void initPliRemporte()
+	{
+		this.pliRemporte=0;
 
 	}
 	
@@ -157,6 +166,55 @@ public class Joueur
 	public Carte[] getMainJoueur() {
 		
 		return this.main;
+	}
+
+	/**
+	 * methode qui retourne le nombre de pli remporter
+	 * @return le nombre de plie remporter
+	 */
+	public int getPliRemporte()
+	{
+		return this.pliRemporte;		
+	}
+
+	/**
+	 * methode qui retourne la mise
+	 * @return la mise
+	 */
+	public int getMise()
+	{
+		return this.mise;
+	}
+
+	/**
+	 * methode qui met a jour le nombre de point de vie en fonction du nombre de pli et de la mise
+	 * @param a nombre de point de vie a enlever
+	 */
+	public void setPointDeVie(int a)
+	{
+		this.pointDeVie=this.pointDeVie - a;
+		
+	}
+
+	public Carte getCarteposer()
+	{
+		return this.cartePosee;
+	}
+
+	public Carte[] enleverCarteMain(Carte carteposer)
+	{
+		int i=0;
+		int y =0;
+		Carte[] res = new Carte[this.main.length-1];
+		while  (i < this.main.length - 1) {
+			if (this.main[i]!=carteposer)
+				{
+				res[y] = new Carte(this.main[i].getValeurs());
+				y++;
+				}
+			i++;
+		}
+		return res;
 	}
 	
 }

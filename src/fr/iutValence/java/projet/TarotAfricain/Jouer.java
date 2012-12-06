@@ -98,9 +98,22 @@ public class Jouer
 					if (i > 3)
 						i = i - 4;
 					this.table[i].setCartePosee(this.table[i].poserCarte());
+					this.table[i].setMain(this.table[i].enleverCarteMain(this.table[i].getCarteposer()));
+					
 				}
-				compareCartes();
+				
+				this.table[compareCartes()].setPliRemporte();
 			}
+			
+			//qui à perdu
+			for (int joueurCourant = 0; joueurCourant <= 3; joueurCourant++)
+			{
+				int a = this.table[joueurCourant].getPliRemporte()- this.table[joueurCourant].getMise();
+				a=(int) Math.pow(a,2);
+				a=(int) Math.sqrt(a);
+				this.table[joueurCourant].setPointDeVie(a);
+			}
+			
 			
 			// decrementation de nbCarte
 			nbCarte--;
@@ -140,7 +153,7 @@ public class Jouer
 	{
 		for (int i = 0; i < 3; i++)
 		{
-			this.table[i].setPliRemporte(0);
+			this.table[i].initPliRemporte();
 		}
 
 	}

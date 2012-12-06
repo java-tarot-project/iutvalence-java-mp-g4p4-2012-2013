@@ -42,11 +42,6 @@ public class Carte
 	 */
 	public boolean superieure(Carte carteGagnante)
 	{
-		// TODO Vérifier la simplification
-		//	if (this.compareTo(carteGagnante)>0)
-		//		return true;
-		//	else
-		//		return false;
 		return ( (this.compareTo(carteGagnante)>0) );
 	}
 

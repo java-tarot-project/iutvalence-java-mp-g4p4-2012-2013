@@ -9,7 +9,7 @@ import java.io.InputStreamReader;
  * @author theodorc
  *
  */
-public class TypeJoueurReel implements TypeDeJoueur
+public class TypeJoueurReelConsole implements TypeDeJoueur
 {
 
 	/**
@@ -63,7 +63,18 @@ public class TypeJoueurReel implements TypeDeJoueur
 
 	public Carte attribueCartePosees(Carte[] cartes)
 	{
-		return null;
+		int valeurCarte =0;
+		try
+		{
+			String ligne_lue=lireClavier();
+			valeurCarte = Integer.parseInt(ligne_lue);
+		}
+		catch(NumberFormatException err){
+			System.out.println("Un entier est nécessaire.");
+			attribueCartePosees(cartes);
+		}
+		Carte carteSelectionnee = new Carte(valeurCarte);
+		return carteSelectionnee;
 		
 		
 	}

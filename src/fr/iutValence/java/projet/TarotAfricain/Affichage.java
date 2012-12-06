@@ -30,4 +30,9 @@ public interface Affichage
 	
 	public abstract void afficherMain(Carte[] mainJoueur, TypeDeJoueur typeDeJ);
 
+
+
+
+	public abstract void afficheCarte(Carte[] mainJoueur, TypeDeJoueur typeDeJ);
+
 }

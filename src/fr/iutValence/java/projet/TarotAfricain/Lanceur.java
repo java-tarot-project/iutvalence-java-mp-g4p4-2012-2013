@@ -10,15 +10,15 @@ public class Lanceur
 
 	/**
 	 * @param args Un paramètre intrinsèque à main mais inutilisé ici.
-	 * @throws Exception 
 	 * @throws MiseException relève des exceptions si le typage de la mise est incorrect.
+	 * @throws Exception 
 	 * 
 	 */
 	public static void main(String[] args) throws MiseException, Exception
 	{
 	
 		Affichage aff = new AffichageConsole();
-		TypeDeJoueur typReel =new TypeJoueurReel();
+		TypeDeJoueur typReel =new TypeJoueurReelConsole();
 		//TypeDeJoueur typIA = new TypeJoueurIA();
 		Joueur J1 = new Joueur(aff,typReel);
 		Joueur J2 = new Joueur(aff,typReel);
