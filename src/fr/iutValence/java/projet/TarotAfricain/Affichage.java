@@ -3,9 +3,9 @@ package fr.iutValence.java.projet.TarotAfricain;
 
 /**
  * @author theodorc
- * Classe Abstraite Affichage.\n
+ * Interface Affichage.\n
  * Description des appels des méthodes pour les affichages spécifiques { console, graphique }.\n
- * Affichage implémente des fonctions d'affichage permettant à l'utilisateur d'avoir une trace de l'exécution du jeu.
+ * Affichage est complété par des fonctions d'affichage permettant à l'utilisateur d'avoir une trace de l'exécution du jeu.
  */
 public interface Affichage
 {

@@ -30,7 +30,6 @@ public class Joueur
 	 */
 	private int mise;
 
-	// FIXME est ce utile (Vs variable locale autre part ?)
 	/**
 	 * Attribut mettant en valeur la carte posée lors d'un pli.
 	 */
@@ -53,6 +52,8 @@ public class Joueur
 	
 	/**
 	 * Constructeur d'un Joueur Alloue 14 points de vie etc
+	 * @param aff Choix de l'affichage
+	 * @param joueur sélection du type de joueur
 	 */
 	public Joueur(Affichage aff,TypeDeJoueur joueur)
 	{

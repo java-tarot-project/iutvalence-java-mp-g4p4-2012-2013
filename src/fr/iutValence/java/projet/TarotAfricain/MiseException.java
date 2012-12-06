@@ -4,8 +4,10 @@ package fr.iutValence.java.projet.TarotAfricain;
  * @author theodorc
  *
  */
+@SuppressWarnings("serial")
 public class MiseException extends Exception
 {
+
 
 	/**
 	 * 

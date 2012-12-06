@@ -38,8 +38,6 @@ public class JeuDeCartes
 
 
 
-	// FIXME il faut différencier l'attribut de la constante (fixed)
-
 	/**
 	 * Tableau de CarteDePaquet
 	 * L'objet CarteDePaquet est utilisé pour son attribut supplémentaire : un booléen carteTiree
@@ -78,9 +76,9 @@ public class JeuDeCartes
 	}
 
 	/**
+	 * Méthode permettant de décrire le nombre de cartes restantes dans un jeu de cartes.
 	 * @return int désignant le nombre de Cartes disponibles dans le paquet de Cartes.
 	 */
-	// FIXME fixed
 	public int CartesRestantesDansPaquet()
 	{
 		int res = 0;

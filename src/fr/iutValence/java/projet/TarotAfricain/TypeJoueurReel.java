@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
+ * Classe complétant TypeDeJoueur
  * @author theodorc
  *
  */
