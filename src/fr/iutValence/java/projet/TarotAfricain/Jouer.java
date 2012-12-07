@@ -57,8 +57,6 @@ public class Jouer
 	{
 		int premierJoueur = 0;
 		int nbCarte = 5;
-		while (true)
-		{
 			this.affiche.demarrerPartie();
 			for (int joueurCourant = 0; joueurCourant <= 3; joueurCourant++)
 			{
@@ -114,7 +112,7 @@ public class Jouer
 				}
 				
 				this.table[compareCartes()].setPliRemporte();
-				this.affiche.finPli(tour);
+				this.affiche.finPli(tour+1);
 				// Phase de décompte des points de vie
 				for (int joueurCourant = 0; joueurCourant <= 3; joueurCourant++)
 				{
@@ -139,11 +137,8 @@ public class Jouer
 				if (this.table[i].getPointDeVie() == 0)
 					break;
 			}
-			premierJoueur++;
-			if(premierJoueur>3) premierJoueur=0;
-		}
-		
 	}
+
 	/**
 	 * @return int l'indice dans du joueur ayant gagné un pli.
 	 **/
