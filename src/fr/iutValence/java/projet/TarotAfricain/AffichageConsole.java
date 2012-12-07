@@ -58,7 +58,7 @@ public class AffichageConsole implements Affichage
 		System.out.print(nomJoueur);
 		System.out.print(" à ");
 		System.out.print(pointDeVie);
-		System.out.print("point de vie.");
+		System.out.println(" point de vie.");
 		
 	}
 
