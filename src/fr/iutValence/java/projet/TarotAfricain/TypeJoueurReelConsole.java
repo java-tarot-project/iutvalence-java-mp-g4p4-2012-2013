@@ -31,27 +31,6 @@ public class TypeJoueurReelConsole implements TypeDeJoueur
 		} 
 	
 	@Override
-	public int attribueMise(int nbCarte)
-	{
-		int mise=0; 
-		try{
-			String ligne_lue=lireClavier();
-			mise = Integer.parseInt(ligne_lue);
-		}
-		catch(NumberFormatException err){
-			System.out.println("il faut un entier");
-			mise = attribueMise(nbCarte);
-		
-		}
-		if (mise > nbCarte) {
-			System.out.println("la mise est pas bonne");
-		}
-		return mise;
-	} 
-	
-	
-
-	@Override
 	public boolean estReel()
 	{
 		return true;
@@ -89,6 +68,25 @@ public class TypeJoueurReelConsole implements TypeDeJoueur
 		return carteSelectionnee;
 		
 		
+	}
+
+	@Override
+	public int attribueMise(int nbCarte, Carte[] main)
+	{
+		int mise=0; 
+		try{
+			String ligne_lue=lireClavier();
+			mise = Integer.parseInt(ligne_lue);
+		}
+		catch(NumberFormatException err){
+			System.out.println("il faut un entier");
+			mise = attribueMise(nbCarte,main);
+		
+		}
+		if (mise > nbCarte) {
+			System.out.println("la mise est pas bonne");
+		}
+		return mise;
 	}
 
 

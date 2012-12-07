@@ -13,9 +13,10 @@ public interface  TypeDeJoueur
 	/**
 	 * Méthode définissant les actions nécessaires à la demande d'une mise
 	 * @param nbCarte entier reflétant un entier maximum pour la mise
+	 * @param main la main du joueur
 	 * @return renvoie un entier reflétant la valeur de la mise.
 	 */
-	public abstract int attribueMise(int nbCarte);
+	public abstract int attribueMise(int nbCarte, Carte[] main);
 	
 	
 	/**
