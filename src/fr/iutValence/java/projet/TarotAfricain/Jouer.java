@@ -59,15 +59,16 @@ public class Jouer
 		int nbCarte = 5;
 		while (true)
 		{
+			this.affiche.demarrerPartie();
+			for (int joueurCourant = 0; joueurCourant <= 3; joueurCourant++)
+			{
+				this.table[joueurCourant].setNomJoueur(
+						this.affiche.demanderNomJoueur(this.table[joueurCourant].getTypeDeJoueur(),joueurCourant+1));
+			}
 			
 			
 			// Premier joueur du tour
 			
-			//affichage du score
-			for (int joueurCourant = 0; joueurCourant <= 3; joueurCourant++)
-			{
-				this.affiche.ScoreJoueur(this.table[joueurCourant].getNomJoueur(),this.table[joueurCourant].getPointDeVie());
-			}
 			
 			initPliRemporte();
 			
@@ -82,14 +83,14 @@ public class Jouer
 				this.table[i].setMain(this.jeuDeCarte.distribuerNCartes(nbCarte));
 
 			}
-			
+			this.affiche.demanderMise();
 			// Mise des joueurs concernant les plis espérés
 			for (int joueurCourant = 0; joueurCourant <= 3; joueurCourant++)
 			{
 				int i = joueurCourant + premierJoueur;
 				if (i > 3)
 					i = i - 4;
-				this.affiche.nomJoueur(this.table[i].getNomJoueur());
+				this.affiche.tourDuJoueur(this.table[i].getNomJoueur());
 				this.table[i].setMise(this.table[i].mise(nbCarte) );
 			}
 			
@@ -99,30 +100,34 @@ public class Jouer
 			for (int tour = 0; tour < nbCarte; tour++)
 			{
 				// Pli
+				this.affiche.debutPli(tour+1);
 				
 				for (int joueurCourant = 0; joueurCourant <= 3; joueurCourant++)
 				{
 					int i = joueurCourant + premierJoueur;
 					if (i > 3)
 						i = i - 4;
-					this.affiche.nomJoueur(this.table[i].getNomJoueur());
+					this.affiche.tourDuJoueur(this.table[i].getNomJoueur());
 					this.table[i].setCartePosee(this.table[i].poserCarte(i));
-					this.affiche.cartePosse(this.table[i].getCartePosee(),this.table[i].getNomJoueur());
 					this.table[i].setMain(this.table[i].enleverCarteMain(this.table[i].getCartePosee()));
 					
 				}
 				
 				this.table[compareCartes()].setPliRemporte();
+				this.affiche.finPli(tour);
+				// Phase de décompte des points de vie
+				for (int joueurCourant = 0; joueurCourant <= 3; joueurCourant++)
+				{
+					int a = this.table[joueurCourant].getPliRemporte()- this.table[joueurCourant].getMise();
+					a=(int) Math.pow(a,2);
+					a=(int) Math.sqrt(a);
+					this.table[joueurCourant].setPointDeVie(a);
+					this.affiche.pointsDeVieRestants(this.table[joueurCourant].getNomJoueur(), this.table[joueurCourant].getPointDeVie());
+				}
+				
 			}
 			
-			//enlevement point de vie
-			for (int joueurCourant = 0; joueurCourant <= 3; joueurCourant++)
-			{
-				int a = this.table[joueurCourant].getPliRemporte()- this.table[joueurCourant].getMise();
-				a=(int) Math.pow(a,2);
-				a=(int) Math.sqrt(a);
-				this.table[joueurCourant].setPointDeVie(a);
-			}
+
 			
 			
 			// decrementation de nbCarte

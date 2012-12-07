@@ -1,5 +1,6 @@
 package fr.iutValence.java.projet.TarotAfricain;
 
+
 /**
  * @author java-tarot-project 
  * Classe émergeant d'Affichage.\n
@@ -12,13 +13,14 @@ public class AffichageConsole implements Affichage
 	public void afficherMise(Carte[] cartes, TypeDeJoueur typeDeJ)
 	{
 		if (typeDeJ.estReel()) { 							// Vérification du type du joueur
-			System.out.println("veuiller entrée votre mise");	// on affiche la demande de mise
+			System.out.println("Veuillez entrer une mise correspondant aux nombres de plis\n" +
+					"que vous espérez remporter lors du jeu.");	// on affiche la demande de mise
 		}
 		
 	}
 
 	@Override
-	public void afficherMain(Carte[] mainJoueur, TypeDeJoueur typeDeJ)
+	public void demanderMain(Carte[] mainJoueur, TypeDeJoueur typeDeJ)
 	{
 		
 		if (typeDeJ.estReel()) {								// Vérification du type du joueur
@@ -35,7 +37,7 @@ public class AffichageConsole implements Affichage
 	public void afficheCarte(TypeDeJoueur typeDeJ)
 	{
 		if (typeDeJ.estReel()) {								// Vérification du type du joueur
-			System.out.println("Quelle carte voulais vous poser ?");
+			System.out.println("Veuillez poser une carte.");
 		}
 	}
 
@@ -43,33 +45,55 @@ public class AffichageConsole implements Affichage
 
 
 	@Override
-	public void nomJoueur(String nom)
+	public void tourDuJoueur(String nom)
 	{
-		System.out.print("le joueur qui joue est ");
-		System.out.println(nom);
+		System.out.printf("Au tour de: %s\n",nom);
 		
 		
 	}
 
+
+
+
 	@Override
-	public void ScoreJoueur(String nomJoueur, int pointDeVie)
+	public void demarrerPartie()
 	{
-		System.out.print("le joueur ");
-		System.out.print(nomJoueur);
-		System.out.print(" à ");
-		System.out.print(pointDeVie);
-		System.out.println(" point de vie.");
+		System.out.println("Début de partie.\n____________________________\n");
 		
 	}
 
 	@Override
-	public void cartePosse(Carte cartePosee, String nom)
+	public void pointsDeVieRestants(String joueurCourant, int pointDeVie)
 	{
-		System.out.print("le joueur ");
-		System.out.print(nom);
-		System.out.print(" à ");
-		System.out.print(cartePosee.toString());
-		System.out.println(" point de vie.");
+		System.out.printf("%s possède %d points de vie.\n",joueurCourant,pointDeVie);
+		
+	}
+
+	@Override
+	public String demanderNomJoueur(TypeDeJoueur typeJoueur, int joueurCourant)
+	{
+		System.out.printf("Saisie du nom pour le joueur %d\n",joueurCourant);
+		return typeJoueur.attribuerNom();
+
+	}
+
+	@Override
+	public void debutPli(int tour)
+	{
+		System.out.printf("Tour n°%d\n___________\n", tour);
+	}
+
+	@Override
+	public void finPli(int tour)
+	{
+		System.out.printf("Fin du pli n°%d\n", tour);
+		
+	}
+
+	@Override
+	public void demanderMise()
+	{
+		System.out.println("------------------------\nVeuillez saisir les mises.\n------------------------");
 		
 	}
 

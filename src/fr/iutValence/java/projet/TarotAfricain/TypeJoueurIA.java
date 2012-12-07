@@ -38,4 +38,17 @@ public class TypeJoueurIA implements TypeDeJoueur
 
 
 
+	@Override
+	public String attribuerNom()
+	{
+		
+		return "JoueurIA";
+	}
+
+
+
+
+
+
+
 }

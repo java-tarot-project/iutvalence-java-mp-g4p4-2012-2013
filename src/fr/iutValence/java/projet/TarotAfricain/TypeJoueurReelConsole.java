@@ -3,6 +3,7 @@ package fr.iutValence.java.projet.TarotAfricain;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Scanner;
 
 /**
  * Classe complétant TypeDeJoueur
@@ -84,6 +85,14 @@ public class TypeJoueurReelConsole implements TypeDeJoueur
 			
 		return carteSelectionnee;
 		
+	}
+
+	@Override
+	public String attribuerNom()
+	{
+		Scanner saisieUtilisateur = new Scanner(System.in); 
+		System.out.println("Veuillez saisir un nom :");
+		return saisieUtilisateur.next(); 
 	}
 
 

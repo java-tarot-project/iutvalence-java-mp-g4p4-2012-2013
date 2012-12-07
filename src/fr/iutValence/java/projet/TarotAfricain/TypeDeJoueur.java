@@ -35,5 +35,12 @@ public interface  TypeDeJoueur
 	 * @return renvoie la carte sélectionnée.
 	 */
 	public abstract Carte attribueCartePosees(Carte[] cartes, int mise, int pliRemporte, int aQui);
+
+
+	/**
+	 * Méthode permettant la capture d'un nom pour un joueur.
+	 * @return String renvoie le nom
+	 */
+	public abstract String attribuerNom();
 	
 }

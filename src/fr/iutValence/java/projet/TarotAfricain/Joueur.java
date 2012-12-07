@@ -59,16 +59,15 @@ public class Joueur
 	 * Constructeur d'un Joueur Alloue 14 points de vie etc
 	 * @param aff Choix de l'affichage
 	 * @param joueur sélection du type de joueur
-	 * @param nnomJoueur le nom du joueur
 	 */
-	public Joueur(Affichage aff,TypeDeJoueur joueur,String nnomJoueur)
+	public Joueur(Affichage aff,TypeDeJoueur joueur)
 	{
 		this.affiche = aff;
 		this.pointDeVie = POINTSDEVIEMAX;
 		this.pliRemporte = 0;
 		this.mise = 0;
 		this.typeDeJ = joueur;
-		this.nomJoueur = nnomJoueur;
+		this.nomJoueur ="";
 	}
 
 	/**
@@ -81,7 +80,7 @@ public class Joueur
 	 */
 	public int mise(int nbCarte) 
 	{
-		this.affiche.afficherMain(getMainJoueur(), this.typeDeJ);
+		this.affiche.demanderMain(getMainJoueur(), this.typeDeJ);
 		this.affiche.afficherMise(getMainJoueur(), this.typeDeJ);
 		return this.typeDeJ.attribueMise(nbCarte,this.main);
 	}
@@ -94,7 +93,7 @@ public class Joueur
 	 */
 	public Carte poserCarte(int i)
 	{
-		this.affiche.afficherMain(getMainJoueur(), this.typeDeJ);
+		this.affiche.demanderMain(getMainJoueur(), this.typeDeJ);
 		this.affiche.afficheCarte(this.typeDeJ);
 		return this.typeDeJ.attribueCartePosees(this.main,this.mise,this.pliRemporte,i);
 	}
@@ -232,6 +231,24 @@ public class Joueur
 			i++;
 		}
 		return res;
+	}
+	/**
+	 * Méthode simple permettant de paramétrer le nom d'un Joueur
+	 * @param nom chaîne de caractères contenant le nom du joueur
+	 */
+	public void setNomJoueur(String nom)
+	{
+		this.nomJoueur = nom;
+	}
+
+	/**
+	 * Méthode simple permettant de renvoyer le Type du joueur { Reel/IA }
+	 * @return renvoie le type TypeDeJoueur du joueur
+	 */
+	public TypeDeJoueur getTypeDeJoueur()
+	{
+
+		return this.typeDeJ;
 	}
 	
 }

@@ -1,5 +1,6 @@
 package fr.iutValence.java.projet.TarotAfricain;
 
+
 /**
  * Classe permettant le lancement d'une partie.
  * @author Nyan-PC
@@ -11,23 +12,18 @@ public class Lanceur
 	/**
 	 * @param args Un paramètre intrinsèque à main mais inutilisé ici.
 	 * @throws MiseException relève des exceptions si le typage de la mise est incorrect.
-	 * @throws Exception 
+	 * @throws Exception relève une exception.
 	 * 
 	 */
 	public static void main(String[] args) throws MiseException, Exception
 	{
-	
-		String nom1 = "NORD";
-		String nom2 = "EST";
-		String nom3 = "SUD";
-		String nom4 = "OUEST";
 		Affichage aff = new AffichageConsole();
 		TypeDeJoueur typReel =new TypeJoueurReelConsole();
 		//TypeDeJoueur typIA = new TypeJoueurIA();
-		Joueur J1 = new Joueur(aff,typReel,nom1);
-		Joueur J2 = new Joueur(aff,typReel,nom2);
-		Joueur J3 = new Joueur(aff,typReel,nom3);
-		Joueur J4 = new Joueur(aff,typReel,nom4);
+		Joueur J1 = new Joueur(aff,typReel);
+		Joueur J2 = new Joueur(aff,typReel);
+		Joueur J3 = new Joueur(aff,typReel);
+		Joueur J4 = new Joueur(aff,typReel);
 		
 		Jouer jou = new Jouer(J1,J2,J3,J4,aff);
 
