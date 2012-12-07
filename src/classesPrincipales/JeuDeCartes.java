@@ -1,4 +1,4 @@
-package fr.iutValence.java.projet.TarotAfricain;
+package classesPrincipales;
 
 /**
  * Classe définissant un "Jeu de Cartes". Un jeu de Cartes est constitué de plusieurs cartes Un jeu de carte peut être

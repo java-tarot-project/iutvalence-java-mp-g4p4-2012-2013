@@ -1,4 +1,10 @@
-package fr.iutValence.java.projet.TarotAfricain;
+package partiePrincipale;
+
+import classesPrincipales.Carte;
+import classesPrincipales.JeuDeCartes;
+import classesPrincipales.Joueur;
+import classesPrincipales.MiseException;
+import interfaceAffichage.Affichage;
 
 
 // Vérifier les public/private !

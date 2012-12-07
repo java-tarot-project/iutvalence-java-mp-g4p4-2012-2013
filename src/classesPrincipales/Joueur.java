@@ -1,4 +1,7 @@
-package fr.iutValence.java.projet.TarotAfricain;
+package classesPrincipales;
+
+import interfaceAffichage.Affichage;
+import interfaceJoueur.TypeDeJoueur;
 
 
 

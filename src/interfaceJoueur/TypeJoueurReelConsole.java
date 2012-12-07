@@ -1,9 +1,12 @@
-package fr.iutValence.java.projet.TarotAfricain;
+package interfaceJoueur;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Scanner;
+
+import classesPrincipales.Carte;
+
 
 /**
  * Classe complétant TypeDeJoueur
@@ -90,6 +93,10 @@ public class TypeJoueurReelConsole implements TypeDeJoueur
 	@Override
 	public String attribuerNom()
 	{
+		@SuppressWarnings("resource")
+		/*si on ferme puis on ré-ouvre immédiatement (boucle sur les 4 joueurs)
+		 * Le scanner affiche une erreur et ne peut poursuivre son action
+		 */
 		Scanner saisieUtilisateur = new Scanner(System.in); 
 		System.out.println("Veuillez saisir un nom :");
 		return saisieUtilisateur.next(); 

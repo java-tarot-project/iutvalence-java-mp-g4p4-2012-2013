@@ -1,4 +1,4 @@
-package fr.iutValence.java.projet.TarotAfricain;
+package classesPrincipales;
 
 /**
  * Carte de Tarot Africain.\n

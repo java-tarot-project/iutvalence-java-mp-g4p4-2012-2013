@@ -1,4 +1,4 @@
-package fr.iutValence.java.projet.TarotAfricain;
+package classesPrincipales;
 
 /**
  * La classe CarteDePaquet permet de compléter le comportement de Carte\n

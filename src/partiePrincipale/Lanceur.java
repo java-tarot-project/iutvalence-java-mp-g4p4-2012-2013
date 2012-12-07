@@ -1,4 +1,11 @@
-package fr.iutValence.java.projet.TarotAfricain;
+package partiePrincipale;
+
+import classesPrincipales.Joueur;
+import classesPrincipales.MiseException;
+import interfaceAffichage.Affichage;
+import interfaceAffichage.AffichageConsole;
+import interfaceJoueur.TypeDeJoueur;
+import interfaceJoueur.TypeJoueurReelConsole;
 
 
 /**
