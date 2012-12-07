@@ -74,6 +74,18 @@ public class TypeJoueurReelConsole implements TypeDeJoueur
 			attribueCartePosees(cartes);
 		}
 		Carte carteSelectionnee = new Carte(valeurCarte);
+		
+		int i = 0;
+		while(i < cartes.length){
+			if(carteSelectionnee.equals(cartes[i]))
+				break;
+			i++;
+		}
+		if (i >= cartes.length){
+			System.out.println("veuillez selectionnez une carte existante.");
+			attribueCartePosees(cartes);
+		}
+			
 		return carteSelectionnee;
 		
 		

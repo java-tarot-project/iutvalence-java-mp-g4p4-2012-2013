@@ -105,7 +105,7 @@ public class Jouer
 				this.table[compareCartes()].setPliRemporte();
 			}
 			
-			//qui à perdu
+			//enlevement point de vie
 			for (int joueurCourant = 0; joueurCourant <= 3; joueurCourant++)
 			{
 				int a = this.table[joueurCourant].getPliRemporte()- this.table[joueurCourant].getMise();
