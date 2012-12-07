@@ -51,5 +51,16 @@ public class AffichageConsole implements Affichage
 		
 	}
 
+	@Override
+	public void ScoreJoueur(String nomJoueur, int pointDeVie)
+	{
+		System.out.print("le joueur ");
+		System.out.print(nomJoueur);
+		System.out.print(" à ");
+		System.out.print(pointDeVie);
+		System.out.print("point de vie.");
+		
+	}
+
 
 }

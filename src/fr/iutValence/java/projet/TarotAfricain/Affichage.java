@@ -50,4 +50,14 @@ public interface Affichage
 
 
 
+
+	/**
+	 * affichage du nombre de point de vie
+	 * @param nomJoueur nom du joueur
+	 * @param pointDeVie nombre de point de vie restant
+	 */
+	public abstract void ScoreJoueur(String nomJoueur, int pointDeVie);
+
+
+
 }
