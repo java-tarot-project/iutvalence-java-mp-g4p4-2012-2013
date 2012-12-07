@@ -63,6 +63,12 @@ public class Jouer
 			
 			// Premier joueur du tour
 			
+			//affichage du score
+			for (int joueurCourant = 0; joueurCourant <= 3; joueurCourant++)
+			{
+				this.affiche.ScoreJoueur(this.table[joueurCourant].getNomJoueur(),this.table[joueurCourant].getPointDeVie());
+			}
+			
 			initPliRemporte();
 			
 			// Distribution des cartes
@@ -72,6 +78,7 @@ public class Jouer
 				int i = joueurCourant + premierJoueur;
 				if (i > 3)
 					i = i - 4;
+
 				this.table[i].setMain(this.jeuDeCarte.distribuerNCartes(nbCarte));
 
 			}
@@ -82,6 +89,7 @@ public class Jouer
 				int i = joueurCourant + premierJoueur;
 				if (i > 3)
 					i = i - 4;
+				this.affiche.nomJoueur(this.table[i].getNomJoueur());
 				this.table[i].setMise(this.table[i].mise(nbCarte) );
 			}
 			
@@ -97,6 +105,7 @@ public class Jouer
 					int i = joueurCourant + premierJoueur;
 					if (i > 3)
 						i = i - 4;
+					this.affiche.nomJoueur(this.table[i].getNomJoueur());
 					this.table[i].setCartePosee(this.table[i].poserCarte());
 					this.table[i].setMain(this.table[i].enleverCarteMain(this.table[i].getCarteposer()));
 					
