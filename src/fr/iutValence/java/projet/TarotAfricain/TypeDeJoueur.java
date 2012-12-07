@@ -29,8 +29,11 @@ public interface  TypeDeJoueur
 	/**
 	 * Méthode décrivant les actions nécessaires à la gestion des cartes posées par un joueur.
 	 * @param cartes paramètre les cartes parmi lesquelles choisir lors d'un pli.
+	 * @param aQui a quelle position le joueur joue { en premier en deuxieme, en troisieme, en dernier}
+	 * @param pliRemporte nombre de plie deja remporter
+	 * @param mise le nombre de pli qu'il doit remporter
 	 * @return renvoie la carte sélectionnée.
 	 */
-	public abstract Carte attribueCartePosees(Carte[] cartes);
+	public abstract Carte attribueCartePosees(Carte[] cartes, int mise, int pliRemporte, int aQui);
 	
 }

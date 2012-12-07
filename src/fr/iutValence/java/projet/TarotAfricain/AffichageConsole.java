@@ -62,5 +62,16 @@ public class AffichageConsole implements Affichage
 		
 	}
 
+	@Override
+	public void cartePosse(Carte cartePosee, String nom)
+	{
+		System.out.print("le joueur ");
+		System.out.print(nom);
+		System.out.print(" à ");
+		System.out.print(cartePosee.toString());
+		System.out.println(" point de vie.");
+		
+	}
+
 
 }

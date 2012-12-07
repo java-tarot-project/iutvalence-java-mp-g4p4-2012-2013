@@ -36,39 +36,6 @@ public class TypeJoueurReelConsole implements TypeDeJoueur
 		return true;
 	}
 
-	
-	
-	
-
-	public Carte attribueCartePosees(Carte[] cartes)
-	{
-		int valeurCarte =0;
-		try
-		{
-			String ligne_lue=lireClavier();
-			valeurCarte = Integer.parseInt(ligne_lue);
-		}
-		catch(NumberFormatException err){
-			System.out.println("Un entier est nécessaire.");
-			attribueCartePosees(cartes);
-		}
-		Carte carteSelectionnee = new Carte(valeurCarte);
-		
-		int i = 0;
-		while(i < cartes.length){
-			if(carteSelectionnee.equals(cartes[i]))
-				break;
-			i++;
-		}
-		if (i >= cartes.length){
-			System.out.println("veuillez selectionnez une carte existante.");
-			attribueCartePosees(cartes);
-		}
-			
-		return carteSelectionnee;
-		
-		
-	}
 
 	@Override
 	public int attribueMise(int nbCarte, Carte[] main)
@@ -87,6 +54,36 @@ public class TypeJoueurReelConsole implements TypeDeJoueur
 			System.out.println("la mise est pas bonne");
 		}
 		return mise;
+	}
+
+	@Override
+	public Carte attribueCartePosees(Carte[] cartes, int mise, int pliRemporte, int aQui)
+	{
+		int valeurCarte =0;
+		try
+		{
+			String ligne_lue=lireClavier();
+			valeurCarte = Integer.parseInt(ligne_lue);
+		}
+		catch(NumberFormatException err){
+			System.out.println("Un entier est nécessaire.");
+			attribueCartePosees(cartes,mise,pliRemporte,aQui);
+		}
+		Carte carteSelectionnee = new Carte(valeurCarte);
+		
+		int i = 0;
+		while(i < cartes.length){
+			if(carteSelectionnee.equals(cartes[i]))
+				break;
+			i++;
+		}
+		if (i >= cartes.length){
+			System.out.println("veuillez selectionnez une carte existante.");
+			attribueCartePosees(cartes,mise,pliRemporte,aQui);
+		}
+			
+		return carteSelectionnee;
+		
 	}
 
 

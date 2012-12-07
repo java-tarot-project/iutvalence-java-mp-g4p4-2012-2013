@@ -83,19 +83,20 @@ public class Joueur
 	{
 		this.affiche.afficherMain(getMainJoueur(), this.typeDeJ);
 		this.affiche.afficherMise(getMainJoueur(), this.typeDeJ);
-		return this.typeDeJ.attribueMise(nbCarte);
+		return this.typeDeJ.attribueMise(nbCarte,this.main);
 	}
 
 	/**
 	 * La méthode poserCarte permet à l'utilisateur de poser une carte sur le tapis \n
 	 * afin de confronter sa carte à celles des trois autres joueurs.
+	 * @param i la possition du joueur
 	 * @return une carte représentant la carte choisie par le joueur.
 	 */
-	public Carte poserCarte()
+	public Carte poserCarte(int i)
 	{
 		this.affiche.afficherMain(getMainJoueur(), this.typeDeJ);
 		this.affiche.afficheCarte(this.typeDeJ);
-		return this.typeDeJ.attribueCartePosees(getMainJoueur());
+		return this.typeDeJ.attribueCartePosees(this.main,this.mise,this.pliRemporte,i);
 	}
 
 	
@@ -211,14 +212,6 @@ public class Joueur
 		return this.nomJoueur;
 	}
 
- 	/**
- 	 * methode qui retourne la carte que le joeur vient de pose
- 	 * @return la carte poser
- 	 */
- 	public Carte getCarteposer()
-	{
-		return this.cartePosee;
-	}
 
 	/**
 	 * methode qui enleve de la main du joueur la carte qu'il vient de poser

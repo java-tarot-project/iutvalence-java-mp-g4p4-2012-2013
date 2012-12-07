@@ -60,4 +60,14 @@ public interface Affichage
 
 
 
+
+	/**
+	 * affiche la carte que le joueur vient de poser
+	 * @param cartePosee la carte que le joueur vient de poser
+	 * @param nom nom du joueur 
+	 */
+	public abstract void cartePosse(Carte cartePosee, String nom);
+
+
+
 }

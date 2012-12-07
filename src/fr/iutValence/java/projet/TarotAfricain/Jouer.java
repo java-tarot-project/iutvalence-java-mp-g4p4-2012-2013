@@ -106,8 +106,9 @@ public class Jouer
 					if (i > 3)
 						i = i - 4;
 					this.affiche.nomJoueur(this.table[i].getNomJoueur());
-					this.table[i].setCartePosee(this.table[i].poserCarte());
-					this.table[i].setMain(this.table[i].enleverCarteMain(this.table[i].getCarteposer()));
+					this.table[i].setCartePosee(this.table[i].poserCarte(i));
+					this.affiche.cartePosse(this.table[i].getCartePosee(),this.table[i].getNomJoueur());
+					this.table[i].setMain(this.table[i].enleverCarteMain(this.table[i].getCartePosee()));
 					
 				}
 				

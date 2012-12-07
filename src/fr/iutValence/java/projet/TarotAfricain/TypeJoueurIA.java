@@ -12,22 +12,28 @@ public class TypeJoueurIA implements TypeDeJoueur
 	@Override
 	public boolean estReel()
 	{
-		// TODO Auto-generated method stub
 		return false;
 	}
 
-	@Override
-	public Carte attribueCartePosees(Carte[] cartes)
-	{
-		// TODO Auto-generated method stub
-		return null;
-	}
+
 
 	@Override
 	public int attribueMise(int nbCarte, Carte[] main)
 	{
-		// TODO Auto-generated method stub
-		return 0;
+		int mise =0;
+		for(int i= 0;i< nbCarte-1;i++){
+			if(main[i].getValeurs()==17||main[i].getValeurs()==18||main[i].getValeurs()==19||main[i].getValeurs()==20||main[i].getValeurs()==21)
+				mise++;
+		}
+		return mise;
+	}
+
+
+
+	@Override
+	public Carte attribueCartePosees(Carte[] cartes, int mise, int pliRemporte, int aQui)
+	{
+		return cartes[0]; // IA la plus simple retourne la premiers carte du tableau
 	}
 
 
