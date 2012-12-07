@@ -32,11 +32,23 @@ public class AffichageConsole implements Affichage
 	}
 
 	@Override
-	public void afficheCarte(Carte[] mainJoueur, TypeDeJoueur typeDeJ)
+	public void afficheCarte(TypeDeJoueur typeDeJ)
 	{
 		if (typeDeJ.estReel()) {								// Vérification du type du joueur
 			System.out.println("Quelle carte voulais vous poser ?");
 		}
+	}
+
+
+
+
+	@Override
+	public void nomJoueur(String nom)
+	{
+		System.out.print("le joueur qui joue est ");
+		System.out.println(nom);
+		
+		
 	}
 
 

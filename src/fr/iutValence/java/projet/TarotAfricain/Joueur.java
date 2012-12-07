@@ -41,27 +41,34 @@ public class Joueur
 	private int pliRemporte;
 
 	/**
-	 * 
+	 * le type d'affichage {Console , graphique}
 	 */
 	private Affichage affiche;
 	
 	/**
-	 * 
+	 * le type du joeur {reelconsole, IA, }
 	 */
 	private TypeDeJoueur typeDeJ;
+	
+	/**
+	 * le nom du joueur
+	 */
+	private String nomJoueur;
 	
 	/**
 	 * Constructeur d'un Joueur Alloue 14 points de vie etc
 	 * @param aff Choix de l'affichage
 	 * @param joueur sélection du type de joueur
+	 * @param nnomJoueur le nom du joueur
 	 */
-	public Joueur(Affichage aff,TypeDeJoueur joueur)
+	public Joueur(Affichage aff,TypeDeJoueur joueur,String nnomJoueur)
 	{
 		this.affiche = aff;
 		this.pointDeVie = POINTSDEVIEMAX;
 		this.pliRemporte = 0;
 		this.mise = 0;
 		this.typeDeJ = joueur;
+		this.nomJoueur = nnomJoueur;
 	}
 
 	/**
@@ -87,7 +94,7 @@ public class Joueur
 	public Carte poserCarte()
 	{
 		this.affiche.afficherMain(getMainJoueur(), this.typeDeJ);
-		this.affiche.afficheCarte(getMainJoueur(), this.typeDeJ);
+		this.affiche.afficheCarte(this.typeDeJ);
 		return this.typeDeJ.attribueCartePosees(getMainJoueur());
 	}
 
@@ -195,12 +202,29 @@ public class Joueur
 		this.pointDeVie=this.pointDeVie - a;
 		
 	}
+	
+	/**
+	 * methode qui retourne le nom du joueur
+	 * @return le nom du joueur
+	 */
+	public String getNomJoueur(){
+		return this.nomJoueur;
+	}
 
-	public Carte getCarteposer()
+ 	/**
+ 	 * methode qui retourne la carte que le joeur vient de pose
+ 	 * @return la carte poser
+ 	 */
+ 	public Carte getCarteposer()
 	{
 		return this.cartePosee;
 	}
 
+	/**
+	 * methode qui enleve de la main du joueur la carte qu'il vient de poser
+	 * @param carteposer la carte qu'il vient de poser
+	 * @return un tableau de carte sans la carte qu'il vient de poser
+	 */
 	public Carte[] enleverCarteMain(Carte carteposer)
 	{
 		int i=0;

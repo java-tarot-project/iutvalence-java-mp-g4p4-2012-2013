@@ -33,6 +33,21 @@ public interface Affichage
 
 
 
-	public abstract void afficheCarte(Carte[] mainJoueur, TypeDeJoueur typeDeJ);
+	/**
+	 * afficheCarte affiche la demande pour poser une carte
+	 * @param typeDeJ Paramètre désignant la nature du joueur { Reel, IA }
+	 */
+	public abstract void afficheCarte(TypeDeJoueur typeDeJ);
+
+
+
+
+	/**
+	 * affiche le nom du joueur
+	 * @param string nom du joueur
+	 */
+	public abstract void nomJoueur(String string);
+
+
 
 }
